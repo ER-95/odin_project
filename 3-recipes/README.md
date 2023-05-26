@@ -1,0 +1,1 @@
+The purpose of this task was to take everything I'd learnt about HTML from The Odin Project, and turn it into a mini, unstyled recipe website

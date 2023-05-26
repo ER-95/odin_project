@@ -1,0 +1,1 @@
+The purpose of this task was to learn how to add links and images to a page.

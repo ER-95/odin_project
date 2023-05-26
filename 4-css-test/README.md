@@ -1,0 +1,1 @@
+The purpose of this task was to get comfortable with the absolute basics of CSS.

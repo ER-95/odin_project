@@ -1,0 +1,1 @@
+The purpose of this task was to create a boilerplate HTML file with any of the essentials.
