@@ -18,6 +18,6 @@ This is where I'll be going through The Odin Project. The readme itself includes
 
 * general order of affairs is git add FILENAME, git commit -m "message", git push
 
-* instead of moving or deleting files locally, git mv or git rm them, then push the change - otherwise you'll make a mess
+* when using the git cli, instead of moving or deleting files via an explorer, git mv or git rm them, then push the change - otherwise you'll make a mess. note: this doesn't apply when using vs code as it does this for you
 
 * rather than doing git add \*, it's best to git add files individually - that way you can add individual commit messages rather than all of your commit messages in one commit being the same
