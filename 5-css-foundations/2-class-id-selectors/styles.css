@@ -1,3 +1,8 @@
+/*
+    I didn't actually realise this when putting the stylesheet together - #three and #four share the same font-size
+    The official solution has an adjust-font-size class where it sets font-size to 24px - had I noticed this, I'd likely have done exactly this (had it not been midnight)
+*/
+
 .odd {
     background-color: lightpink;
     font-family: "Verdana", "DejaVu Sans", sans-serif;
