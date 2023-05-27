@@ -3,6 +3,8 @@ Hello Odin!
 
 This is where I'll be going through The Odin Project. The readme itself includes random tidbits I've picked up along the way that are relevant to me as I'm learning, but probably won't be relevant to future me.
 
+Apologies for the insistence on all lowercase in the readme - it makes it a lot easier for me to jot down my nonsense
+
 # vs code stuff
 * ctrl shift p for shortcut
 
@@ -31,6 +33,10 @@ This is where I'll be going through The Odin Project. The readme itself includes
 * in css, img.huge targets any images with the huge class, whereas .huge-image is a class of its own and while it can be applied to images, it can also be applied to literally anythinge else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
 
 * for font-family, only use quotation marks around the font name if there are spaces in it (e.g. times new roman)
+
+* best practice is to use a space before {, but not for = or "
+
+* at the time of writing (i.e. this probably won't be relevant beyond june 2023), i'm not entirely sure what the use case is for ids, grouping, chaining, or descendants - i understand how to use them in theory, but in reality i'm not sure when to apply each
 
 # git stuff
 * refer [here](https://www.theodinproject.com/lessons/foundations-git-basics) for a crash course on how to set up git (incl. setting up commits in vs code)
