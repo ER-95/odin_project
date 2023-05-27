@@ -1,0 +1,6 @@
+/* you can also do div p in this instance because all instances of "container" are divs and all instances of "text" are ps, but it's bad practice to do so */
+.container .text {
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
