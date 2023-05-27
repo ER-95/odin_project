@@ -64,6 +64,17 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * best practice is to use hyphens instead of camelCase
 
+* css specificity is **weird**:
+    * check out [this page](https://www.w3schools.com/css/css_specificity.asp) for a comprehensive breakdown
+    * in essence:
+        * it's a scoring system whereby each id used gets 100 points, each class, pseudo-class, or attribute selector) gets 10, and each element selector or pseudo-element gets 1 point
+        * inline styling gets a specificity value of 1,000 and is always given highest priority unless the `!important` rule is used
+        * the lower down a rule is in the file, the higher the priority - if font-size is set to 24px on the bottom line and also set higher up at 18px for two rules of equal priority, 24px will take priority - similarly if something is styled with equal priority in both styles.css and index.html, the styling in the html file will take priority
+        * i don't fully understand these at the time of writing, but:
+            * id selectors have a higher specificity than attribute selectors
+            * class selector beats any number of element selectors (i.e. .class{} > div{})
+            
+
 # git stuff
 * things covered in foundations:
     * setting up git, pretty much
@@ -85,3 +96,5 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 ```
 
 * done - look into when to use ids, grouping, chaining, and descendants
+
+* done - look into css specificity - foundation test 6-cascade-fix says chaining selectors and ids gives a rule a higher specificity, but what is the exact order?
