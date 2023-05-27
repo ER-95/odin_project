@@ -48,8 +48,12 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * rather than doing git add \*, it's best to git add files individually - that way you can add individual commit messages rather than all of your commit messages in one commit being the same
 
 # notes for myself
+## i won't be clearing these out when they're completed, but it's nice to have a history of where i've been and where i am in comparison
+
 * look into what these do - they're not covered by The Odin Project
 ```
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
+
+* look into when to use ids, grouping, chaining, and descendants
