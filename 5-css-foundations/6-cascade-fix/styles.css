@@ -1,0 +1,64 @@
+/* issues i've noted that need fixing at the start of this exercise:
+  smaller paragraph isn't smaller
+  confirm button isn't green
+  smaller child div isn't bolded
+things i'm allowed to do:
+  add/remove/edit selectors
+  move declaration blocks (i.e. color: blue;)
+things i cannot do:
+  edit index.html
+  change the actual styles
+things i've learnt so far during this exercise to add to my readme:
+  if something is lower down in the css, it takes precedence (.small-para was originally above .para, which meant .para's font size was overriding .small-para's)
+alternate solution for small-para:
+  change it to p.small-para - i've added a note to my root readme to look into why this works
+alternate solutions for confirm button:
+  1. remove the .confirm selector and use the #confirm-button id instead
+  2. change it to .button.confirm{}
+alternate solutions for text child:
+  1. use just div .child instead of div.text .child and place it below div.text{} - look into why this works when checking out specificity
+  2. use just .text .child
+*/
+
+body{
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.para,
+.small-para {
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+}
+
+.para {
+  font-size: 22px;
+}
+
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
+
+.text .child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
+}
