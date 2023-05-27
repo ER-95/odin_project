@@ -30,6 +30,8 @@ This is where I'll be going through The Odin Project. The readme itself includes
 # css stuff
 * in css, img.huge targets any images with the huge class, whereas .huge-image is a class of its own and while it can be applied to images, it can also be applied to literally anythinge else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
 
+* for font-family, only use quotation marks around the font name if there are spaces in it (e.g. times new roman)
+
 # git stuff
 * refer [here](https://www.theodinproject.com/lessons/foundations-git-basics) for a crash course on how to set up git (incl. setting up commits in vs code)
 
