@@ -52,7 +52,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * ids (preceded by #, unique)
     * grouping classes in css (i.e. class-one, class-two{[stylistic features]}) - for when different classes share some but not all stylistic features
     * chaining classes/ids in html (i.e. class="class-one class-two") and css - for when an element should have multiple classes or ids applied to it. similarly you can do .class-one.class-two{[stylistic features]} in css and it'll only apply those styles to elements with both of those classes
-    * descendant combinators in css (.parent .child only selects .child if it's a child of (i.e. nested in) a .parent in the html)
+    * descendant combinators in css (.parent .child only selects .child if it's a child of (i.e. nested in) a .parent in the html - this can also be done on elements, so instead of .parent .child {[stylistic features]} you could do div p {[stylistic features]} to apply styling to any ps that are children of divs
 
 * in css, img.huge targets any images with the huge class, whereas .huge-image is a class of its own and while it can be applied to images, it can also be applied to literally anythinge else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
 
