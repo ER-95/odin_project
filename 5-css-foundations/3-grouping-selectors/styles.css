@@ -1,0 +1,19 @@
+/*
+I actually misunderstood how The Odin Project wanted me to tackle this - rather than doing the below, they wanted to do the following:
+.blackButton, .yellowButton { [everything inside .allButtons] }
+Functionally this looks the same on the front-end in this instance, but it won't always, so it's best to make sure to properly read things going forwards to make sure I'm giving exactly the right solution
+*/
+
+.allButtons {
+    font-size: 28px;
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+.blackButton {
+    background-color: black;
+    color: white;
+}
+
+.yellowButton {
+    background-color: yellow;
+}
