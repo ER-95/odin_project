@@ -29,7 +29,31 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * disable "HTML: Auto Create Quotes" in preferences
 
+# html stuff
+* html foundations covers:
+    * what tags are and examples of them
+        * div
+        * p
+        * h1-h6
+        * ul vs ol (and li)
+        * strong
+        * em
+        * comments
+        * img
+        * a href (both relative and absolute)
+    * what a boilerplate html file should include (see [here](./1-html-boilerplate/index.html))
+    * what should go in the head (meta tags, title)
+
 # css stuff
+* things covered in foundations:
+    * basic css (what it is, basic syntax, etc)
+    * type selectors in css (e.g. div, p)
+    * classes (preceded by .)
+    * ids (preceded by #, unique)
+    * grouping classes in css (i.e. class-one, class-two{[stylistic features]}) - for when different classes share some but not all stylistic features
+    * chaining classes/ids in html (i.e. class="class-one class-two") - for when an element should have multiple classes or ids applied to it
+    * descendant combinators in css (.parent .child only selects .child if it's a child of (i.e. nested in) a .parent in the html)
+
 * in css, img.huge targets any images with the huge class, whereas .huge-image is a class of its own and while it can be applied to images, it can also be applied to literally anythinge else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
 
 * for font-family, only use quotation marks around the font name if there are spaces in it (e.g. times new roman)
@@ -38,8 +62,12 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * at the time of writing (i.e. this probably won't be relevant beyond june 2023), i'm not entirely sure what the use case is for ids, grouping, chaining, or descendants - i understand how to use them in theory, but in reality i'm not sure when to apply each
 
+* best practice is to use hyphens instead of camelCase
+
 # git stuff
-* refer [here](https://www.theodinproject.com/lessons/foundations-git-basics) for a crash course on how to set up git (incl. setting up commits in vs code)
+* things covered in foundations:
+    * setting up git, pretty much
+        * refer [here](https://www.theodinproject.com/lessons/foundations-git-basics) for a crash course (incl. setting up commits in vs code)
 
 * general order of affairs is git add FILENAME, git commit -m "message", git push
 
