@@ -29,23 +29,26 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * disable "HTML: Auto Create Quotes" in preferences
 
+* vs code doesn't like "#" in filenames/folder names
+
 # html stuff
 * html foundations covers:
     * what tags are and examples of them
         * div
         * p
         * h1-h6
-        * ul vs ol (and li)
+        * ul vs ol (and li) (unordered lists, ordered lists, and points in lists)
         * strong
         * em
         * comments
         * img
         * a href (both relative and absolute)
+        * span (for only marking up part of a piece of text - see [this file](./4-css-test\index.html) for more info)
     * what a boilerplate html file should include (see [here](./1-html-boilerplate/index.html))
     * what should go in the head (meta tags, title)
     * [when to use strong, b, em, and i](https://medium.com/@zac_heisey/when-to-use-strong-b-em-and-i-tags-in-your-markup-fa4d0af8affb)
 
-** html reference sheets can be found [here (devdocs)](https://devdocs.io/html/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+* html reference sheets can be found [here (devdocs)](https://devdocs.io/html/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
 
 # css stuff
 * things covered in foundations:
@@ -88,6 +91,15 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * in your browser's console, a strikethrough on a css style means it's overridden by something else
 
 * when adding css via browser console, if you want to apply something universally throughout the page, ensure you have the root <html> tag selected - where your css goes depends on what you have selected
+
+* padding, margin, and border:
+    * padding increases the space between the border of a box and the content of the box
+    * margin increases the space between the borders of a box and the borders of adjacent boxes.
+    * border adds space (even if it’s only a pixel or two) between the margin and the padding
+    * take a look at the below image for a visual explanation:<br>
+    ![](!readme-images/padding-margin-border.png)
+    * margin doesn't double up - if two elements next to one another have a margin of 60px, the margin will be 60px and not 120px - if one has a margin of 70px, the total margin will be 70px (i.e. the one with the largest margin is picked)
+    * the height of an element is height + padding + border, unless we use box-sizing: border-box; when we do this, the height/width of the element are dynamically assigned based on the padding + border (so if an element has 100px height, 20px padding, and 20px border, it will be 140px in total, but if we use border-box, the height will dynamically decrease to 60px) - border-box is almost always used
 
 # git stuff
 * things covered in foundations:
