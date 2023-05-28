@@ -61,16 +61,17 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * check out [this page (w3schools)](https://www.w3schools.com/css/css_specificity.asp) for a comprehensive breakdown
         * in essence:
             * a declaration that is more specific will take precedence over one that is less specific
-            * it's a scoring system whereby each id used gets 100 points, each class, pseudo-class, or attribute selector) gets 10, and each element selector or pseudo-element gets 1 point
+            * it's a scoring system whereby each id used gets 100 points, each class, pseudo-class (e.g. :hover and :first-of-type), or attribute selector(e.g. [checked]) gets 10, and each type selector or pseudo-element (e.g. :before and :selection) gets 1 point
                 * i.e. in general, an id selector beats class selectors, which beat type selectors
             * inline styling gets a specificity value of 1,000 and is always given highest priority unless the `!important` rule is used
             * the lower down a rule is in the file, the higher the priority (if all else is equal) - if font-size is set to 24px on the bottom line and also set higher up at 18px for two rules of equal priority, 24px will take priority - similarly if something is styled with equal priority in both styles.css and index.html, the styling in the html file will take priority
             * the universal (*) selector (and +, ~, >, and empty spaces) have no specificity value, so * {[stylstic features]} is overridden by everything
             * the > selector is called a child selector - whereas .parent .child will select any .child foudn in .parent, no matter how deep it is, .parent > .child will only target .child when it's a DIRECT descendant of .parent (rather than ones that are also further nested)
             * i don't fully understand these at the time of writing, but:
-                * id selectors have a higher specificity than attribute selectors
-                * class selector beats any number of element selectors (i.e. .class{} > div{})
+                * now understood -  id selectors have a higher specificity than attribute selectors
+                * now understood - class selector beats any number of element selectors (i.e. .class{} > div{})
             * children inherit typography-based properties (color, font-size, font-family, etc), but targeting it directly overrides this (i.e. if parent class has font-size x and child class isn't explicitly set to font-size y, it will inherit this - if it **is** explicitly set to font-size y, this will override the inheritance)
+            * the number of hits on the highest reached level matter - .paragraph:first-of-type has two hits on the fourth level (one class and one pseudo-class) whereas p.paragraph has one hit on the fourth level (.paragraph) and one on the fifth (p - a type selector)
 
 * css reference sheets can be found [here (devdocs)](https://devdocs.io/css/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
@@ -83,7 +84,10 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * at the time of writing (i.e. this probably won't be relevant beyond june 2023), i'm not entirely sure what the use case is for ids, grouping, chaining, or descendants - i understand how to use them in theory, but in reality i'm not sure when to apply each
 
 * best practice is to use hyphens instead of camelCase
-            
+
+* in your browser's console, a strikethrough on a css style means it's overridden by something else
+
+* when adding css via browser console, if you want to apply something universally throughout the page, ensure you have the root <html> tag selected - where your css goes depends on what you have selected
 
 # git stuff
 * things covered in foundations:
@@ -115,3 +119,5 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [live update the page you're working on](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 * [conventional commits - how to structure your commit messages](https://www.conventionalcommits.org/en/v1.0.0/)
 * [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
+* [css specificity on w3schools](https://www.w3schools.com/css/css_specificity.asp)
+* [the css cascade - a beautiful page with tests on specificity](https://2019.wattenberger.com/blog/css-cascade)
