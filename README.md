@@ -6,7 +6,7 @@ This is where I'll be going through The Odin Project. The readme itself includes
 Apologies for the insistence on all lowercase in the readme - it makes it a lot easier for me to jot down my nonsense
 
 # vs code stuff
-* `ctrl shift p` for shortcut
+* `ctrl + shift + p` for shortcut
 
 * commit messages go at the bottom of the file it opens, save and close it once done to commit
 
@@ -30,6 +30,10 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * disable `HTML: Auto Create Quotes` in preferences
 
 * vs code doesn't like `#` in filenames/folder names - `!` and `.` are okay
+
+* disable `Workbench > Editor: Enable Preview` in preferences
+
+* `ctrl + /` comments things out
 
 # html stuff
 * html foundations covers:
@@ -136,6 +140,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * `div` and `span` have no implicit meaning, they primarily exist to hook `id`s or `class`es onto blocks.
         * `div` is usually used to divide the page into different blocks
         * `span` can be used to group text/inline elements and is only used when nothing else is appropriate (e.g. highlighting text in a `p`)
+    * `margin-left: auto` will align an element to the right end of its container
+    * increasing the `margin` of one element effectively increases the size of its container - so take into account size changes when using margin. if one element has `margin: 12px` then applying `margin: auto` to something else in the same container, whil it will take the `margin` of the other element into account, might not look right visually because the margin isn't visible - use borders (see `box-container` class [here](./6-css-margin-and-padding\1-margin-and-padding\index.html) and [here](./6-css-margin-and-padding\1-margin-and-padding\style.css) for more info) or inspect element to help with debugging
 
 # git stuff
 * things covered in foundations:
