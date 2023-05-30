@@ -89,6 +89,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * css reference sheets can be found [here (devdocs)](https://devdocs.io/css/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
+*other useful css info can be found at [csstricks](https://css-tricks.com/)
+
 * in css, `img.huge` targets any images with the `huge` class, whereas `.huge-image` is a class of its own and while it can be applied to images, it can also be applied to literally anythinge else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
 
 * for `font-family`, only use quotation marks around the font name if there are spaces in it (e.g. "`Times New Roman"` vs `Verdana`)
@@ -104,6 +106,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * when adding css via browser console, if you want to apply something universally throughout the page, ensure you have the root `<html>` tag selected - where your css goes depends on what you have selected
 
 * the box model:
+    * every element in a webpage is a box - `p`s are wrapped in boxes, `h1`s are, `img`s are, etc
     * `padding`, `margin`, and `border`:
         * `padding` increases the space between the border of a box and the content of the box
         * `margin` increases the space between the borders of a box and the borders of adjacent boxes.
@@ -123,6 +126,16 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
             * `inline`:
                 * will not break onto a new line
                 * `width` and `height` are ignored
+                * top and bottom `padding`, `margin`, and `border`s apply but don't cause other inline boxes to move away
+                * left and right `padding`, `margin`, and `border`s apply and DO cause other inline boxes to move away
+                * some html elements such as `a`, `span`, `em`, and `strong` use `inline` as their default
+                * generally speaking, you don't want to add padding/margin to inline elements
+        * inner display types dicate how elements inside that box are laid out
+            * this can be changed by setting, for example, `display: flex` - the element will still keep `display: block`, but any direct children of this block will be come `flex` items (see: [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox))
+        * there is also a middle ground of `display: inline-block` which behaves like an inline element but has block-style padding and margin, but generally `flexbox` is used instead
+    * `div` and `span` have no implicit meaning, they primarily exist to hook `id`s or `class`es onto blocks.
+        * `div` is usually used to divide the page into different blocks
+        * `span` can be used to group text/inline elements and is only used when nothing else is appropriate (e.g. highlighting text in a `p`)
 
 # git stuff
 * things covered in foundations:
