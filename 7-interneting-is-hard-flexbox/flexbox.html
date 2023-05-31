@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Some Web Page</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+    <!-- menu is a child of menu-container, so menu-container having display: flex in our stylesheet makes menu a flex item -->
+    <!-- similarly, date, signup, and login are children of menu, so making menu a flex container makes each of those elements flex items -->
+  
+    <!-- the below is replaced by the html below it, before header-container - we then set .signup's properties in styles.css to achieve the same effect as we did when setting links to flex-end  -->
+
+    <!-- <div class='menu-container'>
+      <div class='menu'>
+        <div class='date'>Aug 14, 2016</div>
+        <div class="links">
+          <div class='signup'>Sign Up</div>
+          <div class='login'>Login</div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class='menu-container'>
+      <div class='menu'>
+        <div class='date'>Aug 14, 2016</div>
+        <div class='signup'>Sign Up</div>
+        <div class='login'>Login</div>
+      </div>
+    </div>
+    <div class='header-container'>
+      <div class='header'>
+        <div class='subscribe'>Subscribe &#9662;</div>
+        <div class='logo'><img src='images/awesome-logo.svg'/></div>
+        <div class='social'><img src='images/social-icons.svg'/></div>
+      </div>
+    </div>
+    <div class='photo-grid-container'>
+      <div class='photo-grid'>
+        <div class='photo-grid-item first-item'>
+          <img src='images/one.svg'/>
+        </div>
+        <div class='photo-grid-item'>
+          <img src='images/two.svg'/>
+        </div>
+        <div class='photo-grid-item'>
+          <img src='images/three.svg'/>
+        </div>
+        <div class='photo-grid-item'>
+          <img src='images/four.svg'/>
+        </div>
+        <div class='photo-grid-item last-item'>
+          <img src='images/five.svg'/>
+        </div>
+      </div>
+    </div>
+    <div class='footer'>
+      <div class='footer-item footer-one'></div>
+      <div class='footer-item footer-two'></div>
+      <div class='footer-item footer-three'></div>
+    </div>
+  </body>
+</html>

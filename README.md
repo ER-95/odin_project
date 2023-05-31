@@ -93,7 +93,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * css reference sheets can be found [here (devdocs)](https://devdocs.io/css/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
-*other useful css info can be found at [csstricks](https://css-tricks.com/)
+* other useful css info can be found at [csstricks](https://css-tricks.com/)
 
 * in css, `img.huge` targets any images with the `huge` class, whereas `.huge-image` is a class of its own and while it can be applied to images, it can also be applied to literally anythinge else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
 
@@ -148,6 +148,25 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * this didn't work
         * solution: `span` is an `inline` element by default, so the `margin` was effectively ignored - we had to make the `display: flex` as well
         * we could also wrap it in `p` tags and set the `width` to `fit-content`, because `p` is a `block` by default
+    
+* flex stuff:
+    * `justify-content: center` to a container is the same as adding `margin: 0 auto` to that container's children - remember, `justify-content` does exactly what it says, it **aligns the contents inside it, and not the element itself** - `align-self` aligns an actual element and takes precedence over `justify-content` and `align-content`
+        * `justify-content: space-around` puts equal spacing on both sides of the items, including at the edges, whereas `space-between` puts space between them (so goes to the edge of the container)
+    * items inside `containers-2`, which in turn is inside `container-1`, doesn't count as an item in `container-1` (i.e. items aren't found recursively) - an item is only really a child of its direct container. in the below code, the only items in `menu` are `date` and `links`
+        ~~~~
+        <div class='menu'>
+            <div class='date'>Aug 14, 2016</div>
+            <div class='links'>
+                <div class='signup'>Sign Up</div>
+                <div class='login'>Login</div>
+            </div>
+        </div>
+        ~~~~
+    * `align-items` is used for vertical alignment
+    * when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions
+    * by default, `flex-direction: row-reverse` only applies on a per row basis - `order` applies throughout the whole container
+    * `flex: initial` overrides something inherited like `flex: 1`, so rather than scaling, it lets you set fixed widths
+    * applying `margin-left` to something in a container, it will also shift any items after that item in the container
 
 # git stuff
 * things covered in foundations:
@@ -181,3 +200,6 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
 * [css specificity on w3schools](https://www.w3schools.com/css/css_specificity.asp)
 * [the css cascade - a beautiful page with tests on specificity](https://2019.wattenberger.com/blog/css-cascade)
+* [introduction to flexbox - interneting is hard](https://internetingishard.netlify.app/html-and-css/flexbox/index.html)
+* [interneting is hard as a whole](https://internetingishard.netlify.app/index.html)
+* if responsive design isn't covered by the odin project, [this (IIH)](https://internetingishard.netlify.app/html-and-css/responsive-design/index.html) is a good read
