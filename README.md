@@ -142,6 +142,12 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * `span` can be used to group text/inline elements and is only used when nothing else is appropriate (e.g. highlighting text in a `p`)
     * `margin-left: auto` will align an element to the right end of its container
     * increasing the `margin` of one element effectively increases the size of its container - so take into account size changes when using margin. if one element has `margin: 12px` then applying `margin: auto` to something else in the same container, whil it will take the `margin` of the other element into account, might not look right visually because the margin isn't visible - use borders (see `box-container` class [here](./6-css-margin-and-padding\1-margin-and-padding\index.html) and [here](./6-css-margin-and-padding\1-margin-and-padding\style.css) for more info) or inspect element to help with debugging
+    * ran into an interesting issue when doing 2-margin-and-padding:
+        * `text-align: center` worked as expected
+        * i wanted to approach it with a different solution by wrapping the text in `span` tags and using `margin: auto`
+        * this didn't work
+        * solution: `span` is an `inline` element by default, so the `margin` was effectively ignored - we had to make the `display: flex` as well
+        * we could also wrap it in `p` tags and set the `width` to `fit-content`, because `p` is a `block` by default
 
 # git stuff
 * things covered in foundations:

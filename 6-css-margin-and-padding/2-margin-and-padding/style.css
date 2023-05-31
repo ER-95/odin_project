@@ -1,0 +1,51 @@
+body {
+  background: #eee;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 400px;
+  background: #fff;
+  margin: 16px auto;
+  padding: 16px;
+}
+
+.title, .content, .button-container {
+  padding: 16px;
+}
+
+.title {
+  background: #e3f4ff;
+  margin: 0px;
+}
+
+.content {
+  background: #e3f4ff;
+  margin: 16px auto;
+}
+
+
+.button-container {
+  background: #e3f4ff;
+  text-align: center;
+}
+
+button {
+  background: white;
+  border: 1px solid #eee;
+  display: block;
+  margin: auto;
+  padding: 16px;
+}
+
+/* we can also solve this task by removing "text-align: center" from above, wrapping "and a" in <span> tags, and adding the below: */
+/* .button-container span{
+  margin: auto;
+  display: flex;
+} */
+
+/*orrrrr, we can do the same but wrap it in p tags and add the below, because p is a block rather than inline*/
+/* .button-container p{
+  margin: auto;
+  width: fit-content;
+} */
