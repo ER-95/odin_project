@@ -10,6 +10,7 @@ body {
   padding: 16px;
 }
 
+/* quite proud of remembering to use grouping selectors here */
 .title, .content, .button-container {
   padding: 16px;
 }
