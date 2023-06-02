@@ -166,12 +166,14 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions - **the best way to see this is that `justify-content` applies along the main axis, and `align-items` applies along the cross axis**
     * by default, `flex-direction: row-reverse` only applies on a per row basis - `order` applies throughout the whole container
     * `flex: initial` overrides something inherited like `flex: 1`, so rather than scaling, it lets you set fixed widths
-    * applying `margin-left` to something in a container, it will also shift any items after that item in the container
+    * applying `margin-left: auto` to something in a container will move it to the right hand side of the container; it will also shift any items after that item in the container
     * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
     * `flex-grow` defines how quickly an item increases in size to take up the extra space beyond its defined `width` or `flex-basis`
     * `flex-shrink` defines how quickly an item shrinks in size when the container is too small
     * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply
     * setting `flex-basis` to `auto` means that they use their defined `height` when `flex-direction` is `column` (similarly, defined `width` is used when `flex-direction` is `row`) - if we simply use `flex: 1` then `flex-basis` is set to `0px`, meaning that the height of any columns created will be `0`
+    * `height` overrides `flex: 1` when `flex-direction` is `row`, and `width` overrides `flex: 1` when `flex-direction` is `column` - no matter what, the item won't go above these values
+    * `justify-self` is ignored in flexbox - if we want to move something to the end of the container, we set `margin-top` or `margin-left` to `auto` depending on where we want it to go
 
 # git stuff
 * things covered in foundations:
@@ -196,6 +198,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * done - look into when to use ids, grouping, chaining, and descendants
 
 * done - look into css specificity - foundation test 6-cascade-fix says chaining selectors and ids gives a rule a higher specificity, but what is the exact order?
+
+* done (see flexbox notes) - why doesn't `justify-self: flex-end` do the same as `margin: auto`?
 
 # useful reference material
 * [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
