@@ -163,10 +163,15 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         </div>
         ~~~~
     * `align-items` is used for vertical alignment
-    * when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions
+    * when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions - **the best way to see this is that `justify-content` applies along the main axis, and `align-items` applies along the cross axis**
     * by default, `flex-direction: row-reverse` only applies on a per row basis - `order` applies throughout the whole container
     * `flex: initial` overrides something inherited like `flex: 1`, so rather than scaling, it lets you set fixed widths
     * applying `margin-left` to something in a container, it will also shift any items after that item in the container
+    * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
+    * `flex-grow` defines how quickly an item increases in size to take up the extra space beyond its defined `width` or `flex-basis`
+    * `flex-shrink` defines how quickly an item shrinks in size when the container is too small
+    * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply
+    * setting `flex-basis` to `auto` means that they use their defined `height` when `flex-direction` is `column` (similarly, defined `width` is used when `flex-direction` is `row`) - if we simply use `flex: 1` then `flex-basis` is set to `0px`, meaning that the height of any columns created will be `0`
 
 # git stuff
 * things covered in foundations:
@@ -193,13 +198,16 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * done - look into css specificity - foundation test 6-cascade-fix says chaining selectors and ids gives a rule a higher specificity, but what is the exact order?
 
 # useful reference material
+* [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
+* [css specificity on w3schools](https://www.w3schools.com/css/css_specificity.asp)
+* [the css cascade - a beautiful page with tests on specificity](https://2019.wattenberger.com/blog/css-cascade)
+* [flexbox cheat sheet](https://flexbox.malven.co/)
+
+# supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
     * [how to ask smart questions](http://www.catb.org/esr/faqs/smart-questions.html)
 * [live update the page you're working on](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 * [conventional commits - how to structure your commit messages](https://www.conventionalcommits.org/en/v1.0.0/)
-* [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
-* [css specificity on w3schools](https://www.w3schools.com/css/css_specificity.asp)
-* [the css cascade - a beautiful page with tests on specificity](https://2019.wattenberger.com/blog/css-cascade)
 * [introduction to flexbox - interneting is hard](https://internetingishard.netlify.app/html-and-css/flexbox/index.html)
 * [interneting is hard as a whole](https://internetingishard.netlify.app/index.html)
-* if responsive design isn't covered by the odin project, [this (IIH)](https://internetingishard.netlify.app/html-and-css/responsive-design/index.html) is a good read
+* [interneting is hard - responsive design](https://internetingishard.netlify.app/html-and-css/responsive-design/index.html)
