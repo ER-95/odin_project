@@ -150,8 +150,9 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * we could also wrap it in `p` tags and set the `width` to `fit-content`, because `p` is a `block` by default
     
 * flex stuff:
-    * `justify-content: center` to a container is the same as adding `margin: 0 auto` to that container's children - remember, `justify-content` does exactly what it says, it **aligns the contents inside it, and not the element itself** - `align-self` aligns an actual element and takes precedence over `justify-content` and `align-content`
+    * `justify-content: center` to a container is usually functionally the same as adding `margin: 0 auto` to that container's children (but the latter is bad practice, generally)- remember, `justify-content` does exactly what it says, it **aligns the contents inside it, and not the element itself** - `align-self` aligns an actual element and takes precedence over `justify-content` and `align-content`
         * `justify-content: space-around` puts equal spacing on both sides of the items, including at the edges, whereas `space-between` puts space between them (so goes to the edge of the container)
+    * `justify-content` only applies to direct children, not children of children - see [this exercise](./8-flexbox/3-flex-header-2/index.html) for a good example of this
     * items inside `containers-2`, which in turn is inside `container-1`, doesn't count as an item in `container-1` (i.e. items aren't found recursively) - an item is only really a child of its direct container. in the below code, the only items in `menu` are `date` and `links`
         ~~~~
         <div class='menu'>
@@ -164,6 +165,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         ~~~~
     * `align-items` is used for vertical alignment, but when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions - **the best way to see this is that `justify-content` applies along the main axis, and `align-items` applies along the cross axis**
     * by default, `flex-direction: row-reverse` only applies on a per row basis - `order` applies throughout the whole container
+    * `order` is `0` by default, if we change an item's order to `1`, ceteris paribus it would move to the end of the container
     * `flex: initial` overrides something inherited like `flex: 1`, so rather than scaling, it lets you set fixed widths
     * applying `margin-left: auto` to something in a container will move it to the right hand side of the container; it will also shift any items after that item in the container
     * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
@@ -176,6 +178,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * by default, children bunch at the start of the primary axis, and stretch ot fill the entire container along the cross axis
     * `min-width` is set to the the length of the longest unbreakable string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
     * when `flex-wrap` is set to `wrap`, `align-items` applies to the items on each individual row, whereas `align-content` applies to every row in that box
+    * we can use `@media all and (max-width: VALUE) { .container{} }` to apply conditional formatting based on display width (see [this css-tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for more info)
+    * remember to set `display: flex`!!! this needs to be done in multiple places depending on what you want to flex
 
 # git stuff
 * things covered in foundations:
@@ -188,7 +192,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * rather than doing `git add *`, it's best to git add files individually - that way you can add individual commit messages rather than all of your commit messages in one commit being the same
 
-# notes for myself
+# to-do list
 ## i won't be clearing these out when they're completed, but it's nice to have a history of where i've been and where i am in comparison - i'll probably at least mark them as complete
 
 * look into what these do - they're not covered by The Odin Project
@@ -211,7 +215,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [the css cascade - a beautiful page with tests on specificity](https://2019.wattenberger.com/blog/css-cascade)
 * [flexbox cheat sheet](https://flexbox.malven.co/)
 * [interactive guide to flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
-* [css tricks - complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [css-tricks flexbox cheat sheet](./!readme-images/css-flexbox-poster.png)
 
 # supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
@@ -221,6 +225,15 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [introduction to flexbox - interneting is hard](https://internetingishard.netlify.app/html-and-css/flexbox/index.html)
 * [interneting is hard as a whole](https://internetingishard.netlify.app/index.html)
 * [interneting is hard - responsive design](https://internetingishard.netlify.app/html-and-css/responsive-design/index.html)
+* [css tricks - complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [freecodecamp's intro to flexbox](https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/)
+* [youtube - flexbox crash course](https://www.youtube.com/watch?v=3YW65K6LcIA)
+
+# useful tools
+* [prettier - automatic code formatting](https://prettier.io/)
+* [codebeautify - similar to prettier](https://codebeautify.org/)
+* [caniuse - checks browser compatibility with various things](https://caniuse.com/)
+* [autoprefixer - uses caniuse for adding vendor prefixes to css automatically](https://github.com/postcss/autoprefixer)
 
 # paid courses to look into:
 * [https://css-for-js.dev/](https://css-for-js.dev/)
