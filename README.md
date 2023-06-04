@@ -179,7 +179,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * `min-width` is set to the the length of the longest unbreakable string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
     * when `flex-wrap` is set to `wrap`, `align-items` applies to the items on each individual row, whereas `align-content` applies to every row in that box
     * we can use `@media all and (max-width: VALUE) { .container{} }` to apply conditional formatting based on display width (see [this css-tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for more info)
-    * remember to set `display: flex`!!! this needs to be done in multiple places depending on what you want to flex
+    * remember to set `display: flex`!!! this needs to be done in multiple places depending on what you want to flex - usually you'll want to apply this to anything whose children should flex. similarly, you don't want to overuse flex - while you can achieve what you want, [this exercise](./8-flexbox/4-flex-information/index.html) is a good example of how you can achieve the same without using flexbox
 
 # git stuff
 * things covered in foundations:
