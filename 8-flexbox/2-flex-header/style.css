@@ -1,0 +1,44 @@
+.header  {
+  font-family: monospace;
+  background: papayawhip;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: tomato;
+  background: white;
+  padding: 4px 32px;
+}
+
+ul {
+  /* this removes the dots on the list items*/
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  flex-wrap: wrap;
+  /* it would have been far better to apply padding to .header than doing the below */
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+a {
+  font-size: 22px;
+  background: white;
+  padding: 8px;
+  /* this removes the line under the links */
+  text-decoration: none;
+}
+
+/* this isn't needed for the exercise but I thought it'd be neat to do - if screen width is less than 600px, the items move into a centred column - nice proof of concept */
+@media all and (max-width: 600px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
