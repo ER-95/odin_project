@@ -1,7 +1,7 @@
 # odin_test
 Hello Odin!
 
-This is where I'll be going through The Odin Project. The readme itself includes random tidbits I've picked up along the way that are relevant to me as I'm learning, but probably won't be relevant to future me.
+This is where I'll be going through The Odin Project. The readme itself includes random tidbits I've picked up along the way that are relevant to me as I'm learning, but probably won't be relevant to future me. This mostly consists of things that catch me off guard or are otherwise unexpected.
 
 Apologies for the insistence on all lowercase in the readme - it makes it a lot easier for me to jot down my nonsense
 
@@ -162,18 +162,20 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
             </div>
         </div>
         ~~~~
-    * `align-items` is used for vertical alignment
-    * when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions - **the best way to see this is that `justify-content` applies along the main axis, and `align-items` applies along the cross axis**
+    * `align-items` is used for vertical alignment, but when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions - **the best way to see this is that `justify-content` applies along the main axis, and `align-items` applies along the cross axis**
     * by default, `flex-direction: row-reverse` only applies on a per row basis - `order` applies throughout the whole container
     * `flex: initial` overrides something inherited like `flex: 1`, so rather than scaling, it lets you set fixed widths
     * applying `margin-left: auto` to something in a container will move it to the right hand side of the container; it will also shift any items after that item in the container
     * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
     * `flex-grow` defines how quickly an item increases in size to take up the extra space beyond its defined `width` or `flex-basis`
     * `flex-shrink` defines how quickly an item shrinks in size when the container is too small
-    * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply
+    * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply - so it's not the `width`, so much as "this is the minimum width we'd like it to be in an ideal world, but you can shrink if necessary, provided `flex-shrink` is set to `1`
     * setting `flex-basis` to `auto` means that they use their defined `height` when `flex-direction` is `column` (similarly, defined `width` is used when `flex-direction` is `row`) - if we simply use `flex: 1` then `flex-basis` is set to `0px`, meaning that the height of any columns created will be `0`
     * `height` overrides `flex: 1` when `flex-direction` is `row`, and `width` overrides `flex: 1` when `flex-direction` is `column` - no matter what, the item won't go above these values
     * `justify-self` is ignored in flexbox - if we want to move something to the end of the container, we set `margin-top` or `margin-left` to `auto` depending on where we want it to go
+    * by default, children bunch at the start of the primary axis, and stretch ot fill the entire container along the cross axis
+    * `min-width` is set to the the length of the longest unbreakable string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
+    * when `flex-wrap` is set to `wrap`, `align-items` applies to the items on each individual row, whereas `align-content` applies to every row in that box
 
 # git stuff
 * things covered in foundations:
@@ -201,11 +203,15 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * done (see flexbox notes) - why doesn't `justify-self: flex-end` do the same as `margin: auto`?
 
+* need to learn css grid
+
 # useful reference material
 * [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
 * [css specificity on w3schools](https://www.w3schools.com/css/css_specificity.asp)
 * [the css cascade - a beautiful page with tests on specificity](https://2019.wattenberger.com/blog/css-cascade)
 * [flexbox cheat sheet](https://flexbox.malven.co/)
+* [interactive guide to flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
+* [css tricks - complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 # supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
@@ -215,3 +221,9 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [introduction to flexbox - interneting is hard](https://internetingishard.netlify.app/html-and-css/flexbox/index.html)
 * [interneting is hard as a whole](https://internetingishard.netlify.app/index.html)
 * [interneting is hard - responsive design](https://internetingishard.netlify.app/html-and-css/responsive-design/index.html)
+
+# paid courses to look into:
+* [https://css-for-js.dev/](https://css-for-js.dev/)
+* [ui.dev](ui.dev)
+* [https://codewithmosh.com/](https://codewithmosh.com/)
+* [https://courses.webdevsimplified.com/](https://courses.webdevsimplified.com/)
