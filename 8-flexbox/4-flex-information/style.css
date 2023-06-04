@@ -1,0 +1,73 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+/* do not edit this footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+
+/* my solution */
+/* this .title section is overengineered - I could have just done text-align: center on the body and aligned title text to the center */
+.title {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.item { /* we apply this to the item rather than .item-container, because we want the direct descendents of .item (i.e. img and .text) to be aligned in a column */
+  display: flex;
+  flex-direction: column;
+  flex-basis: 200px;
+  align-items: center;
+}
+
+.item-container{
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.text {
+  text-align: center;
+}
+
+/* the odin project did this slightly different to me (see below). I initially struggled getting the text to move to a new line because I had display: flex applied to .item, meaning that overrode divs automatically going onto a new line. I worked around this by putting them into 4 columns. theirs works similarly, but because they didn't apply display:flex to .item, their divs were on separate lines, achieving the same effect
+
+body {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.item {
+  max-width: 200px;
+}
+*/
