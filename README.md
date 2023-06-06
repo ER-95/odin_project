@@ -148,6 +148,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * this didn't work
         * solution: `span` is an `inline` element by default, so the `margin` was effectively ignored - we had to make the `display: flex` as well
         * we could also wrap it in `p` tags and set the `width` to `fit-content`, because `p` is a `block` by default
+
+* ul has a default padding of 40px, so you might want to override this
     
 * flex stuff:
     * `justify-content: center` to a container is usually functionally the same as adding `margin: 0 auto` to that container's children (but the latter is bad practice, generally)- remember, `justify-content` does exactly what it says, it **aligns the contents inside it, and not the element itself** - `align-self` aligns an actual element and takes precedence over `justify-content` and `align-content`
