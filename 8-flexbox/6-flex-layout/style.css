@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+/* my solution */
+ul {
+  list-style-type: none;
+  padding-left: 0; /* we set padding-left for left-links further down, so remove the default */
+}
+
+a {
+  text-decoration: none;
+  color: #5C5C5C;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+}
+
+.footer {
+  display: flex; 
+  justify-content: space-between;
+  background-color: #eeeeee;
+}
+
+.left-links, .right-links{
+  display: flex;
+  gap: 20px;
+}
+
+.left-links{
+  padding-left: 40px;
+}
+
+.right-links{
+  padding-right: 40px;
+}
