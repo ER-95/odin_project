@@ -152,7 +152,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * flex stuff:
     * `justify-content: center` to a container is usually functionally the same as adding `margin: 0 auto` to that container's children (but the latter is bad practice, generally)- remember, `justify-content` does exactly what it says, it **aligns the contents inside it, and not the element itself** - `align-self` aligns an actual element and takes precedence over `justify-content` and `align-content`
         * `justify-content: space-around` puts equal spacing on both sides of the items, including at the edges, whereas `space-between` puts space between them (so goes to the edge of the container)
-    * `justify-content` only applies to direct children, not children of children - see [this exercise](./8-flexbox/3-flex-header-2/index.html) for a good example of this
+    * `display: flex` only applies to direct children of a container rather than grandchildren. similarly, `justify-content` only applies to direct children, not children of children - see [this exercise](./8-flexbox/3-flex-header-2/index.html) for a good example of this
     * items inside `containers-2`, which in turn is inside `container-1`, doesn't count as an item in `container-1` (i.e. items aren't found recursively) - an item is only really a child of its direct container. in the below code, the only items in `menu` are `date` and `links`
         ~~~~
         <div class='menu'>
@@ -175,7 +175,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * setting `flex-basis` to `auto` means that they use their defined `height` when `flex-direction` is `column` (similarly, defined `width` is used when `flex-direction` is `row`) - if we simply use `flex: 1` then `flex-basis` is set to `0px`, meaning that the height of any columns created will be `0`
     * `height` overrides `flex: 1` when `flex-direction` is `row`, and `width` overrides `flex: 1` when `flex-direction` is `column` - no matter what, the item won't go above these values
     * `justify-self` is ignored in flexbox - if we want to move something to the end of the container, we set `margin-top` or `margin-left` to `auto` depending on where we want it to go
-    * by default, children bunch at the start of the primary axis, and stretch ot fill the entire container along the cross axis
+    * by default, children bunch at the start of the primary axis, and stretch to fill the entire container along the cross axis
     * `min-width` is set to the the length of the longest unbreakable string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
     * when `flex-wrap` is set to `wrap`, `align-items` applies to the items on each individual row, whereas `align-content` applies to every row in that box
     * we can use `@media all and (max-width: VALUE) { .container{} }` to apply conditional formatting based on display width (see [this css-tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for more info)
