@@ -70,6 +70,7 @@ button.cancel {
 
 /* solution - i solved this by visualising boxes around everything in the sample picture - one tall rectangular box around the exclamation mark (.icon), a big box around the bold text, cross, normal text, and buttons (as they're horizontally distinct from the exclamation mark) (,all-text-container), then a wide rectangular box around the bold text and the cross (.top-line-container) */
 /* note - the odin project put a button inside the header div, which would accomplish the same job - need to find out if there's a reason for this or if one is particularly better practice than the other */
+/* looked into this and the odin project's solution isn't particularly good practice so stick with this */
 .modal {
   padding: 20px;
   display: flex;
