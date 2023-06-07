@@ -236,6 +236,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [codebeautify - similar to prettier](https://codebeautify.org/)
 * [caniuse - checks browser compatibility with various things](https://caniuse.com/)
 * [autoprefixer - uses caniuse for adding vendor prefixes to css automatically](https://github.com/postcss/autoprefixer)
+* free images can be found at [pexels](https://www.pexels.com/), [pixabay](https://pixabay.com/), and [unsplash](https://unsplash.com/)
 
 # paid courses to look into:
 * [https://css-for-js.dev/](https://css-for-js.dev/)
