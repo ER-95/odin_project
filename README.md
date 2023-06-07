@@ -1,4 +1,4 @@
-# odin_test
+# odin_test test
 Hello Odin!
 
 This is where I'll be going through The Odin Project. The readme itself includes random tidbits I've picked up along the way that are relevant to me as I'm learning, but probably won't be relevant to future me. This mostly consists of things that catch me off guard or are otherwise unexpected.
