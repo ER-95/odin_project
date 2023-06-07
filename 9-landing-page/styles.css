@@ -1,0 +1,138 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: #1F2937;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 50px;
+}
+
+.header-left {
+    color: #F9FAF8;
+    align-self: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-right {
+    display: flex;
+    align-self: center;
+    gap: 25px;
+}
+
+.header-link {
+    color: #E5E7EB;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+
+}
+
+.hero-block {
+    display: flex;
+    background-color: #1F2937;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-header {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F9FAF8;
+}
+
+.hero-text {
+
+}
+
+.hero-button {
+
+}
+
+.hero-right {
+    flex: 1;
+}
+
+.hero-image-container {
+
+}
+
+.hero-image-text {
+
+}
+
+.info-block {
+
+}
+
+.info-header {
+
+}
+
+.info-card-container {
+
+}
+
+.info-card {
+
+}
+
+.info-card-text {
+
+}
+
+.quote-block {
+
+}
+
+.quote-text {
+
+}
+
+.quote-attributee {
+
+}
+
+.cta-block {
+
+}
+
+.cta-container {
+
+}
+
+.cta-left {
+
+}
+
+.cta-header {
+
+}
+
+.cta-text {
+
+}
+
+.cta-right {
+
+}
+
+.cta-button {
+
+}
+
+.footer {
+
+}
