@@ -1,15 +1,14 @@
 html, body {
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.header {
+header {
     background-color: #1F2937;
     display: flex;
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 50px;
+    padding: 1% 20% 1% 20%; /* originally had this as a % on padding-left and padding-right with a height manually set but this seems to work better for responsiveness - at the time of creating i haven't yet learnt about responsive design */
 }
 
 .header-left {
@@ -17,7 +16,6 @@ html, body {
     align-self: center;
     font-size: 24px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-right {
@@ -26,9 +24,8 @@ html, body {
     gap: 25px;
 }
 
-.header-link {
+a.header-link {
     color: #E5E7EB;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .content {
@@ -38,8 +35,9 @@ html, body {
 .hero-block {
     display: flex;
     background-color: #1F2937;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 1% 20% 1% 20%;
+    gap: 100px;
+    align-items: center;
 }
 
 .hero-left {
@@ -49,28 +47,41 @@ html, body {
 .hero-header {
     font-size: 48px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     color: #F9FAF8;
+    
 }
 
 .hero-text {
-
+    color: #E5E7EB;
+    font-size: 18px;
 }
 
 .hero-button {
-
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 25px 8px 25px;
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .hero-right {
     flex: 1;
+    
 }
 
 .hero-image-container {
-
+    background-color: #6D747D;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-image-text {
-
+    color: #E5E7EB;
 }
 
 .info-block {
@@ -135,4 +146,11 @@ html, body {
 
 .footer {
 
+}
+
+/* not actually needed considering i haven't studied responsiveness but it was bugging me */
+@media all and (max-width: 800px) {
+    .hero-header{
+        font-size: 38px;
+    }
 }

@@ -8,16 +8,19 @@
 		<title>This website is awesome</title>
 	</head>
 	<body>
-        <div class="header">
+		<!-- originally had this as div class header, but using just header is better practice-->
+        <header>
 			<div class="header-left">Header Logo</div>
             <div class="header-right">
-				<div class="header-link">header link one</div>
-				<div class="header-link">header link two</div>
-				<div class="header-link">header link three</div>
+				<!-- originally had these as div class header-link but they're links, so a is the right answer-->
+				<a class="header-link">header link one</a>
+				<a class="header-link">header link two</a>
+				<a class="header-link">header link three</a>
 			</div>
-        </div>
-		<div class="content">
-			<div class="hero-block">
+        </header>
+		<section class="content">
+			<!-- originally had each of the sections as divs - section is better practice -->
+			<section class="hero-block">
 				<div class="hero-left">
 					<div class="hero-header">This website is awesome</div>
 					<div class="hero-text">This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</div>
@@ -28,8 +31,8 @@
 						<div class="hero-image-text">this is a placeholder for an image</div>
 					</div>
 				</div>
-			</div>
-			<div class="info-block">
+			</section>
+			<section class="info-block">
 				<div class="info-header">Some random information.</div>
 				<div class="info-card-container">
 					<div class="info-card"></div>
@@ -41,12 +44,12 @@
 					<div class="info-card"></div>
 					<div class="info-card-text">this is some subtext under an illustration or image</div>
 				</div>
-			</div>
-			<div class="quote-block">
+			</section>
+			<section class="quote-block">
 				<div class="quote-text">This is an inspiring quote, or a testimonial for a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</div>
 				<div class="quote-attributee">-Thor, God of Thunder</div>
-			</div>
-			<div class="cta-block">
+			</section>
+			<section class="cta-block">
 				<div class="cta-container">
 					<div class="cta-left">
 						<div class="cta-header">Call to action! It's time!</div>
@@ -56,8 +59,9 @@
 						<button class="cta-button">Sign up</button>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+		</section>
+		<!-- change this to <footer> -->
 		<div class="footer">
 			Copyright ⓒ The Odin Project 2021
 		</div>
