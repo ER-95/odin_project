@@ -35,7 +35,7 @@ a.header-link {
 .hero-block {
     display: flex;
     background-color: #1F2937;
-    padding: 5% 20% 5% 20%;
+    padding: 5% 20% 7% 20%;
     gap: 100px;
     align-items: center;
 }
@@ -48,7 +48,6 @@ a.header-link {
     font-size: 48px;
     font-weight: bold;
     color: #F9FAF8;
-    
 }
 
 .hero-text {
@@ -70,12 +69,11 @@ a.header-link {
 
 .hero-right {
     flex: 1;
-    
 }
 
 .hero-image-container {
     background-color: #6D747D;
-    height: 15vh;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,10 +81,11 @@ a.header-link {
 
 .hero-image-text {
     color: #E5E7EB;
+    text-align: center;
 }
 
 .info-block {
-    
+    padding: 2% 0 3% 0;
 }
 
 .info-header {
@@ -94,12 +93,13 @@ a.header-link {
     font-size: 36px;
     font-weight: 800;
     color: #1F2937;
-    padding: 2% 0 2% 0;
+    padding-bottom: 2%;
 }
 
 .info-card-container {
     display: flex;
     justify-content: center;
+    gap: 3%;
 }
 
 .info-item {
@@ -115,11 +115,13 @@ a.header-link {
     outline-width: 4px;
     outline-color: #3882F6;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .info-card-text {
     text-align: center;
-    width: 250px;
+    width: 15vh;
+    color: #1F2937
 }
 
 .quote-block {
