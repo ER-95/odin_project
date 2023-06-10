@@ -1,3 +1,5 @@
+/* when done, fix this breaking on different zoom levels */
+
 html, body {
     padding: 0;
     margin: 0;
@@ -8,7 +10,7 @@ header {
     background-color: #1F2937;
     display: flex;
     justify-content: space-between;
-    padding: 1% 20% 1% 20%; /* originally had this as a % on padding-left and padding-right with a height manually set but this seems to work better for responsiveness - at the time of creating i haven't yet learnt about responsive design */
+    padding: 1% 20%; /* originally had this as a % on padding-left and padding-right with a height manually set but this seems to work better for responsiveness - at the time of creating i haven't yet learnt about responsive design. note: 1% 20% is the same as 1% 20% 1% 20%*/
 }
 
 .header-left {
@@ -21,7 +23,7 @@ header {
 .header-right {
     display: flex;
     align-self: center;
-    gap: 25px;
+    gap: 2vw;
 }
 
 a.header-link {
@@ -35,8 +37,8 @@ a.header-link {
 .hero-block {
     display: flex;
     background-color: #1F2937;
-    padding: 5% 20% 7% 20%;
-    gap: 100px;
+    padding: 5% 20% 7% 20%; /* more padding at the bottom than the top */
+    gap: 7vw;
     align-items: center;
 }
 
@@ -53,7 +55,7 @@ a.header-link {
 .hero-text {
     color: #E5E7EB;
     font-size: 18px;
-    padding: 5px 0 5px 0;
+    padding: 2% 0;
 }
 
 .hero-button {
@@ -61,8 +63,8 @@ a.header-link {
     color: #F9FAF8;
     border-radius: 8px;
     border: none;
-    padding: 8px 25px 8px 25px;
-    margin: 10px 0 10px 0;
+    padding: 3% 10%;
+    margin: 5px 0;
     font-weight: bold;
     font-size: 18px;
 }
@@ -109,8 +111,8 @@ a.header-link {
 }
 
 .info-card-image {
-    height: 15vh;
-    width: 15vh; /* you can use vh for the width as well - this ensures they're square */
+    height: 10vw; /* you can use vw for the height as well - this ensures they're square */
+    width: 10vw;
     outline-style: solid;
     outline-width: 4px;
     outline-color: #3882F6;
@@ -125,31 +127,54 @@ a.header-link {
 }
 
 .quote-block {
-
+    background-color: #E5E7EB;
+    display: flex;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .quote-text {
-
+    font-weight: 300;
+    font-style: italic;
+    font-size: 36px;
+    width: 40vw;
 }
 
 .quote-attributee {
-
+    font-weight: bold;
+    font-size: 24px;
+    width: 42vw;
+    align-self: flex-end;
 }
 
 .cta-block {
-
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-container {
-
+    display: flex;
+    background-color: #3882F6;
+    width: 60vw;
+    height: 15vh;
+    border-radius: 10px;
 }
 
 .cta-left {
-
+    color: #F9FAF8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 15%;
+    flex: 3;
 }
 
 .cta-header {
-
+    font-weight: bold;
 }
 
 .cta-text {
@@ -157,11 +182,22 @@ a.header-link {
 }
 
 .cta-right {
-
+    display: flex;
+    flex: 1;
+    align-self: center;
+    justify-self: center;
+    padding: 0 10% 0 0;
 }
 
 .cta-button {
-
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border-radius: 8px;
+    border: solid 2px;
+    padding: 3% 10%;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .footer {

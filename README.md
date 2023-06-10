@@ -234,6 +234,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 # useful tools
 * [prettier - automatic code formatting](https://prettier.io/)
 * [codebeautify - similar to prettier](https://codebeautify.org/)
+* [code beautifier - similar again](http://www.codebeautifier.com/)
+* [css optimizer - restructure function is really useful for merging classes with same properties](https://css.github.io/csso/csso.html)
 * [caniuse - checks browser compatibility with various things](https://caniuse.com/)
 * [autoprefixer - uses caniuse for adding vendor prefixes to css automatically](https://github.com/postcss/autoprefixer)
 * free images can be found at [pexels](https://www.pexels.com/), [pixabay](https://pixabay.com/), and [unsplash](https://unsplash.com/)
