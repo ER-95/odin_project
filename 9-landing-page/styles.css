@@ -201,12 +201,26 @@ a.header-link {
 }
 
 .footer {
-
+    background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    color: #F9FAF8;
+    padding: 2% 0;
 }
 
 /* not actually needed considering i haven't studied responsiveness but it was bugging me */
 @media all and (max-width: 800px) {
-    .hero-header{
+    .hero-header {
         font-size: 38px;
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .quote-text {
+        font-size: 24px;
+    }
+
+    .quote-attributee {
+        font-size: 18px;
     }
 }
