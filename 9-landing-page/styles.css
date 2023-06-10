@@ -224,3 +224,13 @@ a.header-link {
         font-size: 18px;
     }
 }
+
+@media all and (max-height: 800px) {
+    .quote-text {
+        font-size: 24px;
+    }
+
+    .quote-attributee {
+        font-size: 18px;
+    }
+}
