@@ -52,6 +52,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * what should go in the head (meta tags, title)
     * [when to use strong, b, em, and i](https://medium.com/@zac_heisey/when-to-use-strong-b-em-and-i-tags-in-your-markup-fa4d0af8affb)
 
+* split content into `<section>`s instead of using `<div>`s - similarly use `<header>` and `<footer>`
+
 * html reference sheets can be found [here (devdocs)](https://devdocs.io/html/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
 
 # css stuff
@@ -178,10 +180,18 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * `height` overrides `flex: 1` when `flex-direction` is `row`, and `width` overrides `flex: 1` when `flex-direction` is `column` - no matter what, the item won't go above these values
     * `justify-self` is ignored in flexbox - if we want to move something to the end of the container, we set `margin-top` or `margin-left` to `auto` depending on where we want it to go
     * by default, children bunch at the start of the primary axis, and stretch to fill the entire container along the cross axis
-    * `min-width` is set to the the length of the longest unbreakable string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
     * when `flex-wrap` is set to `wrap`, `align-items` applies to the items on each individual row, whereas `align-content` applies to every row in that box
-    * we can use `@media all and (max-width: VALUE) { .container{} }` to apply conditional formatting based on display width (see [this css-tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for more info)
     * remember to set `display: flex`!!! this needs to be done in multiple places depending on what you want to flex - usually you'll want to apply this to anything whose children should flex. similarly, you don't want to overuse flex - while you can achieve what you want, [this exercise](./8-flexbox/4-flex-information/index.html) is a good example of how you can achieve the same without using flexbox
+
+* `min-width` is set to the the length of the longest unbreakable string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
+
+* we can use `@media all and (max-width: VALUE) { .container{} }` to apply conditional formatting based on display width (see [this css-tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for more info)
+
+* `margin: auto` doesn't work on `<div>`s because they automatically take up full width
+
+* `vw` can be used on a height, similarly `vh` can be used on a width - this lets you make items scale (like the boxes [here](./9-landing-page/index.html))
+
+* generally speaking, px is best to use for padding, vw/vh for responsiveness, and sometimes % for height - but play it by ear
 
 # git stuff
 * things covered in foundations:
