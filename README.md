@@ -193,6 +193,35 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * generally speaking, px is best to use for padding, vw/vh for responsiveness, and sometimes % for height - but play it by ear
 
+# js stuff
+* `let`, `const`, and `var` are used for variables
+    * `let` and `var` are very similar, but `var` has no block scope - only current function or global (if defined outside a function), and are processed at function start (or script start for globals)
+    * `const` cannot be reassigned
+    * generall speaking, `const` names are uppercase for legibility
+
+* we can define multiple variables on each line by separating with commas, or on separate lines with tab indentation:
+    ```
+    let user = 'name',
+        age = 25,
+        message = 'Hello';
+    ```
+* when changing a variable, you can't use `let` etc on it again - it's already declared as a type
+
+* variables can only contain letters, numbers, and \$ or \_, first character cannot be a number, and they are case sensitive
+
+* `==` tests whether values are the same, `===` tests whether the data types are **also** the same; same with `!=` and `!==`
+
+* prefixing and postfixing operators (++, for example) works slightly differently - `counter++` increments the counter and returns the old value, `++counter` increments it and returns the new value - in the below example, `a`, `b`, and `c` are output as `2`, `d` is output as `1`
+    ```
+    let a = 1, b = 1;
+    let c = ++a;
+    let d = b++;
+    ```
+
+* `+` will concatenate anything after a string if it encounters one, so `"" + 1 + 0` will output `10`, `4 + 5 + "px"` will output `45px`, and `4 + 5 + "px" + 2 + 7` will output `45px27`
+
+* putting `+` before a variable will convert them to a number - so if `apples = 2` and `oranges = 3 ` and we `alert (apples + oranges)`, we'll get `23` because they're concatenated, but if we `alert (+apples + +oranges`), we'll get `5` because they've been converted to numbers
+
 # git stuff
 * things covered in foundations:
     * setting up git, pretty much
@@ -221,6 +250,9 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * need to learn css grid
 
+# general notes
+* in chrome, f12 --> console --> cog on second row --> tick "selected content only" to hide errors from extensions
+
 # useful reference material
 * [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
 * [css specificity on w3schools](https://www.w3schools.com/css/css_specificity.asp)
@@ -228,6 +260,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [flexbox cheat sheet](https://flexbox.malven.co/)
 * [interactive guide to flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
 * [css-tricks flexbox cheat sheet](./!readme-images/css-flexbox-poster.png)
+* [javascript.info](https://javascript.info/)
 
 # supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
@@ -240,6 +273,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [css tricks - complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [freecodecamp's intro to flexbox](https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/)
 * [youtube - flexbox crash course](https://www.youtube.com/watch?v=3YW65K6LcIA)
+* one day, I want my portfolio to look like [this](https://stefantopalovicdev.vercel.app/) (video on it [here](https://www.youtube.com/watch?v=VjiWpGR82t0))
+* [javascript for impatient programmers](https://exploringjs.com/impatient-js/toc.html)
 
 # useful tools
 * [prettier - automatic code formatting](https://prettier.io/)
@@ -249,6 +284,11 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [caniuse - checks browser compatibility with various things](https://caniuse.com/)
 * [autoprefixer - uses caniuse for adding vendor prefixes to css automatically](https://github.com/postcss/autoprefixer)
 * free images can be found at [pexels](https://www.pexels.com/), [pixabay](https://pixabay.com/), and [unsplash](https://unsplash.com/)
+* [realtimecolors](https://realtimecolors.com/) to see color schemes on a live website
+* [fontpair](https://www.fontpair.co/all) for fonts that go well together
+* [haikei](https://app.haikei.app/) to generate svg/png graphics
+* [gradient.style](https://gradient.style/) for css gradients and shapes
+* [omatsuri](https://omatsuri.app/) for a bunch of stuff, from color shades to triangle generators, symbols, etc
 
 # paid courses to look into:
 * [https://css-for-js.dev/](https://css-for-js.dev/)
