@@ -10,7 +10,7 @@ header {
     background-color: #1F2937;
     display: flex;
     justify-content: space-between;
-    padding: 1% 20%; /* originally had this as a % on padding-left and padding-right with a height manually set but this seems to work better for responsiveness - at the time of creating i haven't yet learnt about responsive design. note: 1% 20% is the same as 1% 20% 1% 20%*/
+    padding: 1% 20%; /* originally had this as a px on padding-left and padding-right with a height manually set but this seems to work better for responsiveness - at the time of creating i haven't yet learnt about responsive design. note: 1% 20% is the same as 1% 20% 1% 20%*/
 }
 
 .header-left {
