@@ -222,6 +222,12 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * putting `+` before a variable will convert them to a number - so if `apples = 2` and `oranges = 3 ` and we `alert (apples + oranges)`, we'll get `23` because they're concatenated, but if we `alert (+apples + +oranges`), we'll get `5` because they've been converted to numbers
 
+* to include a variable in a concatenation, you have to use template literals -  `` ` `` instead of `"` or `'` - so `` `Hello, ${name}` ``, for example - these also respect line breaks without needing to manually enter a break character
+
+* all string methods return a new string rather than modifying the original string
+
+* regex is written without quotes
+
 # git stuff
 * things covered in foundations:
     * setting up git, pretty much
@@ -261,6 +267,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [interactive guide to flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
 * [css-tricks flexbox cheat sheet](./!readme-images/css-flexbox-poster.png)
 * [javascript.info](https://javascript.info/)
+* [javascript string methods](https://www.w3schools.com/js/js_string_methods.asp) and [reference](https://www.w3schools.com/jsref/jsref_obj_string.asp), also at [mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 # supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
