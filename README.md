@@ -191,7 +191,13 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * `vw` can be used on a height, similarly `vh` can be used on a width - this lets you make items scale (like the boxes [here](./9-landing-page/index.html))
 
-* generally speaking, px is best to use for padding, vw/vh for responsiveness, and sometimes % for height - but play it by ear
+* generally speaking, `px` is best to use for padding, `svw`/`svh` for responsiveness, and sometimes `%` for height - but play it by ear
+    * `dvh` causes content to resize as the user scrolls which isn't ideal
+
+* `rem` is best to use for font sizes, potentially with `clamp` (e.g. `3rem, 5svw+1rem, 6rem` - min, preferred, max)
+    * you can also use a `clamp` or even `min` on `gap`s between elements
+
+* media queries can be used to stack side by side elements into a column on mobile
 
 # js stuff
 * `let`, `const`, and `var` are used for variables
@@ -223,10 +229,14 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * putting `+` before a variable will convert them to a number - so if `apples = 2` and `oranges = 3 ` and we `alert (apples + oranges)`, we'll get `23` because they're concatenated, but if we `alert (+apples + +oranges`), we'll get `5` because they've been converted to numbers
 
 * to include a variable in a concatenation, you have to use template literals -  `` ` `` instead of `"` or `'` - so `` `Hello, ${name}` ``, for example - these also respect line breaks without needing to manually enter a break character
+    * calculations can be done in template literals by doing `${variableA - variableB}`
 
 * all string methods return a new string rather than modifying the original string
 
 * regex is written without quotes
+
+* OR (`||`) finds the first truthy value - or returns the last value if all are false
+    * similarly, AND (`&&`) finds the first false value - or returns the last value if all are true
 
 # git stuff
 * things covered in foundations:
@@ -282,6 +292,9 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [youtube - flexbox crash course](https://www.youtube.com/watch?v=3YW65K6LcIA)
 * one day, I want my portfolio to look like [this](https://stefantopalovicdev.vercel.app/) (video on it [here](https://www.youtube.com/watch?v=VjiWpGR82t0))
 * [javascript for impatient programmers](https://exploringjs.com/impatient-js/toc.html)
+* [conquering responsive layouts course](https://courses.kevinpowell.co/conquering-responsive-layouts)
+* [net ninja regex tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD)
+* [when not to use regex](https://softwareengineering.stackexchange.com/questions/113237/when-you-should-not-use-regular-expressions)
 
 # useful tools
 * [prettier - automatic code formatting](https://prettier.io/)
