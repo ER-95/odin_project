@@ -291,6 +291,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [freecodecamp's intro to flexbox](https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/)
 * [youtube - flexbox crash course](https://www.youtube.com/watch?v=3YW65K6LcIA)
 * one day, I want my portfolio to look like [this](https://stefantopalovicdev.vercel.app/) (video on it [here](https://www.youtube.com/watch?v=VjiWpGR82t0))
+    * or [this](https://www.benjaminbaker.dev/) (video on it [here](https://www.youtube.com/watch?v=gcpYTxa0GGw))
 * [javascript for impatient programmers](https://exploringjs.com/impatient-js/toc.html)
 * [conquering responsive layouts course](https://courses.kevinpowell.co/conquering-responsive-layouts)
 * [net ninja regex tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD)
