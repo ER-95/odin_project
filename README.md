@@ -266,8 +266,23 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * need to learn css grid
 
-# general notes
+# devtools notes
 * in chrome, f12 --> console --> cog on second row --> tick "selected content only" to hide errors from extensions
+
+* extra tools can be used via chrome dev tools by clicking the three dots and going to more tools
+
+* the .cls button (in styles) can be used to add a class to an element - remember to press enter after doing this
+    * similarly, .hov can be used to force element states (visited, hover, etc)
+
+* the window icon to the right of .cls and .hov can be used to open up the sidebar (padding/margin) pane
+
+* sources --> breakpoints can be used to pause javascript (specifically event listener ones)
+    * plugin *.js files may interfere here, so you can right click and ignore them
+    * you can also click on a line number to always pause on that line
+
+* scope in the devtools tells you what variables are currently defined
+
+* when editing js in devtools, we have to ctrl + s to save it
 
 # useful reference material
 * [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
