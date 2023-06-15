@@ -238,6 +238,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * OR (`||`) finds the first truthy value - or returns the last value if all are false
     * similarly, AND (`&&`) finds the first false value - or returns the last value if all are true
 
+* variables declared within a function are local to that function - variables defined outside of a function are available globally
+
 # git stuff
 * things covered in foundations:
     * setting up git, pretty much
