@@ -238,7 +238,16 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * OR (`||`) finds the first truthy value - or returns the last value if all are false
     * similarly, AND (`&&`) finds the first false value - or returns the last value if all are true
 
-* variables declared within a function are local to that function - variables defined outside of a function are available globally
+* variables declared within a function are local to that function - variables defined outside of a function are available and editable globally
+    * similarly, if a variable exists globally but we define it inside a function with `let` or similar, the global value remains ignored and unedited
+
+* we can edit an argument it's been passed to a function, for example to emphasise text (e.g. `function showMessage(from, text){from='*'+from+'*';}`)
+
+* you can define a default value (i.e. the value used if no argument is given) by putting `=` and then the default string or value after the parameter - we can also set a default value to be another function, so that if no parameter is given for X, we call a different function instead
+
+* calling `return` without a value causes a function to exit immediately
+
+* best practice is that a function should do exactly what its name says - `show`, `get`, `calc`, `create`, or `check`, for example. so, `getAge` shouldn't show an `alert` with `age`
 
 # git stuff
 * things covered in foundations:
