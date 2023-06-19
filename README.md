@@ -249,6 +249,45 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * best practice is that a function should do exactly what its name says - `show`, `get`, `calc`, `create`, or `check`, for example. so, `getAge` shouldn't show an `alert` with `age`
 
+* the standard way of creating a function (`function Y(){CODE}`) is called a function declaration, but we can also have a function expression, whereby we say `let Y = function(){CODE};` (note the semicolon - it's a variable, after all) - this stores it in a variable, and writing `alert(Y)` would output the code, rather than running it
+    * function expressions are only usable from the moment they appear in the code, rather than being created at runtime
+    * however, if we have a function declaration inside another function or a conditional then call it outside that function, it won't work as intended, because function declarations are local and only visible in the code block in which they reside
+        * we can use a function expression to declare a variable as a function outside of that function, then define it inside - this is especially useful for conditionals, for example
+    * generally speaking, we only want to use function expressions when a function declaration is not fit for the task (as above)
+
+* callback functions can be used as arguments in another function:
+    ```
+    function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+    }
+
+    function showOk() {
+        alert( "You agreed." );
+    }
+
+    function showCancel() {
+        alert( "You canceled the execution." );
+    }
+
+    // usage: functions showOk, showCancel are passed as arguments to ask
+    ask("Do you agree?", showOk, showCancel);
+    ```
+
+    or in the shorter form:
+    ```
+    function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+    }
+
+    ask(
+        "Do you agree?",
+        function() { alert("You agreed."); },
+        function() { alert("You canceled the execution."); }
+    );
+    ```
+
 # git stuff
 * things covered in foundations:
     * setting up git, pretty much
