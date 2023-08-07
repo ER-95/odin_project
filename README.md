@@ -217,16 +217,19 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * `==` tests whether values are the same, `===` tests whether the data types are **also** the same; same with `!=` and `!==`
 
-* prefixing and postfixing operators (++, for example) works slightly differently - `counter++` increments the counter and returns the old value, `++counter` increments it and returns the new value - in the below example, `a`, `b`, and `c` are output as `2`, `d` is output as `1`
+* prefixing and postfixing operators (++, for example) works slightly differently - `counter++` increments the counter and returns the original value, `++counter` increments it and returns the new value - in the below example, `a`, `b`, and `c` are output as `2`, `d` is output as `1`
     ```
     let a = 1, b = 1;
     let c = ++a;
     let d = b++;
     ```
 
-* `+` will concatenate anything after a string if it encounters one, so `"" + 1 + 0` will output `10`, `4 + 5 + "px"` will output `45px`, and `4 + 5 + "px" + 2 + 7` will output `45px27`
+* `+` will concatenate anything after a string if it encounters one, so:
+    * `"" + 1 + 0` will output `10`
+    * `4 + 5 + "px"` will output `45px`
+    * `4 + 5 + "px" + 2 + 7` will output `45px27`
 
-* putting `+` before a variable will convert them to a number - so if `apples = 2` and `oranges = 3 ` and we `alert (apples + oranges)`, we'll get `23` because they're concatenated, but if we `alert (+apples + +oranges`), we'll get `5` because they've been converted to numbers
+* putting `+` before a string variable will convert them to a number - so if `apples = "2"` and `oranges = "3" ` (note the quotation marks) and we `alert (apples + oranges)`, we'll get `23` because they're concatenated strings, but if we `alert (+apples + +oranges`), we'll get `5` because they've been converted to numbers
 
 * to include a variable in a concatenation, you have to use template literals -  `` ` `` instead of `"` or `'` - so `` `Hello, ${name}` ``, for example - these also respect line breaks without needing to manually enter a break character
     * calculations can be done in template literals by doing `${variableA - variableB}`
@@ -235,13 +238,13 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * regex is written without quotes
 
-* OR (`||`) finds the first truthy value - or returns the last value if all are false
-    * similarly, AND (`&&`) finds the first false value - or returns the last value if all are true
+* OR (`||`) finds the first truthy value when given multiple values - or returns the last value if all are false
+    * similarly, AND (`&&`) finds the first false value when given multiple values- or returns the last value if all are true
 
 * variables declared within a function are local to that function - variables defined outside of a function are available and editable globally
     * similarly, if a variable exists globally but we define it inside a function with `let` or similar, the global value remains ignored and unedited
 
-* we can edit an argument it's been passed to a function, for example to emphasise text (e.g. `function showMessage(from, text){from='*'+from+'*';}`)
+* we can edit an argument that's been passed to a function, for example to emphasise text (e.g. `function showMessage(from, text){from = '*' + from+ '*';}`)
 
 * you can define a default value (i.e. the value used if no argument is given) by putting `=` and then the default string or value after the parameter - we can also set a default value to be another function, so that if no parameter is given for X, we call a different function instead
 
@@ -249,7 +252,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 
 * best practice is that a function should do exactly what its name says - `show`, `get`, `calc`, `create`, or `check`, for example. so, `getAge` shouldn't show an `alert` with `age`
 
-* the standard way of creating a function (`function Y(){CODE}`) is called a function declaration, but we can also have a function expression, whereby we say `let Y = function(){CODE};` (note the semicolon - it's a variable, after all) - this stores it in a variable, and writing `alert(Y)` would output the code, rather than running it
+* the standard way of creating a function (`function Y(){CODE}`) is called a function declaration, but we can also have a function expression, whereby we say `let Y = function(){CODE};` (note the semicolon at the end) - this stores it in a variable, and writing `alert(Y)` would output the code, rather than running it
     * function expressions are only usable from the moment they appear in the code, rather than being created at runtime
     * however, if we have a function declaration inside another function or a conditional then call it outside that function, it won't work as intended, because function declarations are local and only visible in the code block in which they reside
         * we can use a function expression to declare a variable as a function outside of that function, then define it inside - this is especially useful for conditionals, for example
@@ -287,6 +290,41 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         function() { alert("You canceled the execution."); }
     );
     ```
+    * functions should be short and do exactly one thing
+        * best practice is to nest functions, so rather than putting your whole code in `function showPrimes(n){}`, `showPrimes()` should have one or more functions inside, such as `isPrime()`
+            * compare how much easier the second one is to read compared to the first:
+            ```
+            function showPrimes(n) {
+            nextPrime: for (let i = 2; i < n; i++) {
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) continue nextPrime;
+                }
+                alert( i ); // a prime
+                }
+            }
+            ```
+            vs
+            ```
+            function showPrimes(n) {
+                for (let i = 2; i < n; i++) {
+                    if (!isPrime(i)) continue;
+                    alert(i);  // a prime
+                }
+            }
+            function isPrime(n) {
+                for (let i = 2; i < n; i++) {
+                    if ( n % i == 0) return false;
+                }
+                return true;
+            }
+            ```
+    
+    * question mark operators can also be used in functions for if/else queries, e.g. `function checkAge(age) { return (age > 18) ? true : confirm("Did your parents give you permission?") }` - the colon separates the response for true from the response for false
+        * similarly, we can use or operators to do the same, `return (age > 18) || confirm("Did your parents give you permission?")`
+
+    * arrow functions are another way of expressing functions, e.g. `let sum (a, b) => a+b;`
+        * if there is a single argument, parentheses around it can be ommitted, if there are no arguments then they can be empty but must be present
+        * they can also be used with operators, e.g. `let function = (a < x) ? () => alert("Hello") : () => alert("Goodbye");`
 
 # git stuff
 * things covered in foundations:
