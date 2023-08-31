@@ -325,6 +325,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * arrow functions are another way of expressing functions, e.g. `let sum (a, b) => a+b;`
         * if there is a single argument, parentheses around it can be ommitted, if there are no arguments then they can be empty but must be present
         * they can also be used with operators, e.g. `let function = (a < x) ? () => alert("Hello") : () => alert("Goodbye");`
+        * another example is `let double = n => alert(n + " doubled is equal to " + n * 2); double(3)`
 
 # git stuff
 * things covered in foundations:
@@ -381,6 +382,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [css-tricks flexbox cheat sheet](./!readme-images/css-flexbox-poster.png)
 * [javascript.info](https://javascript.info/)
 * [javascript string methods](https://www.w3schools.com/js/js_string_methods.asp) and [reference](https://www.w3schools.com/jsref/jsref_obj_string.asp), also at [mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+* [arrow functions cheat sheet](https://www.samanthaming.com/tidbits/47-arrow-functions-cheatsheet/)
 
 # supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
@@ -399,6 +401,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [conquering responsive layouts course](https://courses.kevinpowell.co/conquering-responsive-layouts)
 * [net ninja regex tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD)
 * [when not to use regex](https://softwareengineering.stackexchange.com/questions/113237/when-you-should-not-use-regular-expressions)
+* [differences between regular and arrow functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
 
 # useful tools
 * [prettier - automatic code formatting](https://prettier.io/)
