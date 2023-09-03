@@ -327,6 +327,13 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * they can also be used with operators, e.g. `let function = (a < x) ? () => alert("Hello") : () => alert("Goodbye");`
         * another example is `let double = n => alert(n + " doubled is equal to " + n * 2); double(3)`
 
+    * when troubleshooting errors, type errors can tell you something isn't a function when it actually is - the key thing to bear in mind here is that the function you're calling might not be compatible with that type of data (see below for example)
+        ```
+        const str1 = "Hello";
+        const str2 = "World!";
+        const message = str1.push(str2);
+        ```
+
 # git stuff
 * things covered in foundations:
     * setting up git, pretty much

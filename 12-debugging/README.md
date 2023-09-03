@@ -1,0 +1,1 @@
+The purpose of this task is to find the errors in [unedited-index.html](./unedited-index.html) and fix them (found in [fixed-index.html](./fixed-index.html)).
