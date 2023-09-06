@@ -93,11 +93,13 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
                     5. type/pseudo-element
                 5. position on `styles.css`
 
+* you can use something like `background: red !important` to confirm you're selecting the correct element (similarly we can do `border: 2px solid red`)
+
 * css reference sheets can be found [here (devdocs)](https://devdocs.io/css/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 * other useful css info can be found at [csstricks](https://css-tricks.com/)
 
-* in css, `img.huge` targets any images with the `huge` class, whereas `.huge-image` is a class of its own and while it can be applied to images, it can also be applied to literally anythinge else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
+* in css, `img.huge` targets any images with the `huge` class, whereas `.huge-image` is a class of its own and while it can be applied to images, it can also be applied to literally anything else. so while on the front-end, these **should** function similarly (provided the rest of your code is good), it's bad practice to use the latter because it's asking for trouble, and makes your code unnecessarily hard to read
 
 * for `font-family`, only use quotation marks around the font name if there are spaces in it (e.g. "`Times New Roman"` vs `Verdana`)
 
