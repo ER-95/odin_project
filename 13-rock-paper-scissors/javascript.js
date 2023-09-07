@@ -22,19 +22,19 @@ function playRound(playerChoice, computerChoice) {
   } else if (computerChoice == "rock") {
       if (playerChoice == "paper") {
         winner = "player";
-      } else if (playerChoice = "scissors") {
+      } else if (playerChoice == "scissors") {
         winner = "computer";
       }
   } else if (computerChoice == "paper") {
       if (playerChoice == "rock") {
         winner = "computer";
-      } else if (playerChoice = "scissors") {
+      } else if (playerChoice == "scissors") {
         winner = "player";
       }
   } else if (computerChoice == "scissors") {
       if (playerChoice == "rock") {
         winner = "player";
-      } else if (playerChoice = "paper") {
+      } else if (playerChoice == "paper") {
         winner = "computer";
       }
     }
@@ -77,3 +77,26 @@ playRound(playerChoice, computerChoice);
   //     winner = "computer";
   //   }
   // }
+
+  // The below is my second attempt, but it turned into spaghetti code, so I merged both for my third solution
+  // if (computerChoice == playerChoice) {
+  //   winner = "draw";
+  // } else if (computerChoice == "rock") {
+  //     if (playerChoice == "paper") {
+  //       winner = "player";
+  //     } else if (playerChoice = "scissors") {
+  //       winner = "computer";
+  //     }
+  // } else if (computerChoice == "paper") {
+  //     if (playerChoice == "rock") {
+  //       winner = "computer";
+  //     } else if (playerChoice = "scissors") {
+  //       winner = "player";
+  //     }
+  // } else if (computerChoice == "scissors") {
+  //     if (playerChoice == "rock") {
+  //       winner = "player";
+  //     } else if (playerChoice = "paper") {
+  //       winner = "computer";
+  //     }
+  //   }
