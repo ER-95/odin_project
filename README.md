@@ -292,9 +292,9 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         function() { alert("You canceled the execution."); }
     );
     ```
-    * functions should be short and do exactly one thing
-        * best practice is to nest functions, so rather than putting your whole code in `function showPrimes(n){}`, `showPrimes()` should have one or more functions inside, such as `isPrime()`
-            * compare how much easier the second one is to read compared to the first:
+* functions should be short and do exactly one thing
+    * best practice is to nest functions, so rather than putting your whole code in `function showPrimes(n){}`, `showPrimes()` should have one or more functions inside, such as `isPrime()`
+        * compare how much easier the second one is to read compared to the first:
             ```
             function showPrimes(n) {
             nextPrime: for (let i = 2; i < n; i++) {
@@ -321,20 +321,22 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
             }
             ```
     
-    * question mark operators can also be used in functions for if/else queries, e.g. `function checkAge(age) { return (age > 18) ? true : confirm("Did your parents give you permission?") }` - the colon separates the response for true from the response for false
-        * similarly, we can use or operators to do the same, `return (age > 18) || confirm("Did your parents give you permission?")`
+* question mark operators can also be used in functions for if/else queries, e.g. `function checkAge(age) { return (age > 18) ? true : confirm("Did your parents give you permission?") }` - the colon separates the response for true from the response for false
+    * similarly, we can use or operators to do the same, `return (age > 18) || confirm("Did your parents give you permission?")`
 
-    * arrow functions are another way of expressing functions, e.g. `let sum (a, b) => a+b;`
-        * if there is a single argument, parentheses around it can be ommitted, if there are no arguments then they can be empty but must be present
-        * they can also be used with operators, e.g. `let function = (a < x) ? () => alert("Hello") : () => alert("Goodbye");`
-        * another example is `let double = n => alert(n + " doubled is equal to " + n * 2); double(3)`
+* arrow functions are another way of expressing functions, e.g. `let sum (a, b) => a+b;`
+    * if there is a single argument, parentheses around it can be ommitted, if there are no arguments then they can be empty but must be present
+    * they can also be used with operators, e.g. `let function = (a < x) ? () => alert("Hello") : () => alert("Goodbye");`
+    * another example is `let double = n => alert(n + " doubled is equal to " + n * 2); double(3)`
 
-    * when troubleshooting errors, type errors can tell you something isn't a function when it actually is - the key thing to bear in mind here is that the function you're calling might not be compatible with that type of data (see below for example)
+* when troubleshooting errors, type errors can tell you something isn't a function when it actually is - the key thing to bear in mind here is that the function you're calling might not be compatible with that type of data (see below for example)
         ```
         const str1 = "Hello";
         const str2 = "World!";
         const message = str1.push(str2);
         ```
+
+* when working with the console, remember to use `console.log()` and not `return`
 
 # git stuff
 * things covered in foundations:
