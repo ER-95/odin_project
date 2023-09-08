@@ -2,42 +2,63 @@ const choices = ["rock", "paper", "scissors"];
 let computerChoice;
 let playerChoice;
 let winner;
+let playerScore = 0;
+let computerScore = 0;
+let overallWinner;
 
 function getComputerChoice() {
   computerChoice = choices[Math.floor(Math.random() * choices.length)];
   return computerChoice;
 }
 
-getComputerChoice();
-
 function getPlayerChoice() {
   playerChoice = prompt("What would you like to pick, rock, paper, or scissors?").toLowerCase();
 }
 
-getPlayerChoice();
-
-function playRound(playerChoice, computerChoice) {
+function findRoundWinner(){
   if (computerChoice == playerChoice) {
     winner = "draw";
-  } else if (computerChoice == "rock") {
+  }
+  if (computerChoice == "rock") {
       if (playerChoice == "paper") {
         winner = "player";
-      } else if (playerChoice == "scissors") {
+      } 
+      if (playerChoice == "scissors") {
         winner = "computer";
       }
-  } else if (computerChoice == "paper") {
+  }
+  if (computerChoice == "paper") {
       if (playerChoice == "rock") {
         winner = "computer";
-      } else if (playerChoice == "scissors") {
+      } 
+      if (playerChoice == "scissors") {
         winner = "player";
       }
-  } else if (computerChoice == "scissors") {
+  }
+  if (computerChoice == "scissors") {
       if (playerChoice == "rock") {
         winner = "player";
-      } else if (playerChoice == "paper") {
+      } 
+      if (playerChoice == "paper") {
         winner = "computer";
       }
     }
+}
+
+function updateScore(){
+  if (winner == "player"){
+    playerScore++;
+  }
+  if (winner == "computer"){
+    computerScore++;
+  }
+}
+
+function playRound(playerChoice, computerChoice) {
+  getComputerChoice();
+  getPlayerChoice();
+  findRoundWinner();
+  updateScore();
   console.log("Computer picked " + computerChoice);
   console.log("Player picked " + playerChoice);
   if (winner == "draw") {
@@ -45,9 +66,40 @@ function playRound(playerChoice, computerChoice) {
   } else {
     console.log("Winner is " + winner);
   }
+  console.log("Player score is " + playerScore + ", computer score is " + computerScore);
 }
 
-playRound(playerChoice, computerChoice);
+function outputOverallWinner(){
+  if (playerScore == 5) {
+    overallWinner = "player";
+  }
+  else {
+    overallWinner = "computer";
+  }
+  console.log("Game over. Overall winner is " + overallWinner);
+}
+
+while ((playerScore < 5) && (computerScore < 5)) {
+  playRound(playerChoice, computerChoice);
+}
+
+outputOverallWinner();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // The below is my original code for this, but it has a lot of unnecessary duplications (e.g. we can declare a draw by writing out an if to compare playerChoice to computerChoice once rather than three times)
   // if (computerChoice == "rock") {
