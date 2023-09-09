@@ -1,12 +1,6 @@
-// current issues: player can send invalid input
-
 const choices = ["rock", "paper", "scissors"];
-let computerChoice;
-let playerChoice;
-let winner;
-let playerScore = 0;
-let computerScore = 0;
-let overallWinner;
+let computerChoice, playerChoice, winner, overallWinner;
+let playerScore = 0, computerScore = 0;
 
 function getComputerChoice() {
   computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -25,12 +19,6 @@ function checkValidityPlayerChoice() {
     checkValidityPlayerChoice();
   }
 }
-
-// function checkPlayerChoice(playerChoice){
-//   if (!(choices.includes(playerChoice))) {
-//     playerChoice = prompt("Please select a valid option from rock, paper, and scissors").toLowerCase();
-//   }
-// }
 
 function findRoundWinner() {
   if (computerChoice == playerChoice) {
