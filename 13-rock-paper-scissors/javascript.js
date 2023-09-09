@@ -1,3 +1,5 @@
+// current issues: player can send invalid input
+
 const choices = ["rock", "paper", "scissors"];
 let computerChoice;
 let playerChoice;
@@ -6,8 +8,6 @@ let playerScore = 0;
 let computerScore = 0;
 let overallWinner;
 
-// for the two below functions, instead of setting the variable computerChoice/playerChoice, we could instead return them - this would resolve the issue we were having of the game consistently being played a round behind (because if we set the values they were immediately being overwritten) - see "chatgpt debugging" file in this directory
-
 function getComputerChoice() {
   computerChoice = choices[Math.floor(Math.random() * choices.length)];
   return computerChoice;
@@ -15,6 +15,15 @@ function getComputerChoice() {
 
 function getPlayerChoice() {
   playerChoice = prompt("What would you like to pick, rock, paper, or scissors?").toLowerCase();
+  checkValidityPlayerChoice();
+  return playerChoice;
+}
+
+function checkValidityPlayerChoice() {
+  if (!choices.includes(playerChoice)) {
+    playerChoice = prompt("Please select a valid option - either rock, paper, or scissors").toLowerCase();
+    checkValidityPlayerChoice();
+  }
 }
 
 // function checkPlayerChoice(playerChoice){
@@ -62,12 +71,12 @@ function updateScore() {
   }
 }
 
-function getInputs(){
+function playRound() {
   getComputerChoice();
   getPlayerChoice();
 }
 
-function evaluateRound(playerChoice, computerChoice) {
+function evaluateRound() {
   findRoundWinner();
   updateScore();
   console.log("Computer picked " + computerChoice);
@@ -90,8 +99,8 @@ function outputOverallWinner() {
 }
 
 while (playerScore < 5 && computerScore < 5) {
-  getInputs();
-  evaluateRound(playerChoice, computerChoice);
+  playRound();
+  evaluateRound();
 }
 
 outputOverallWinner();
