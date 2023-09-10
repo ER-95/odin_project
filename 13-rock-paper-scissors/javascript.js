@@ -7,6 +7,7 @@ function getComputerChoice() {
   return computerChoice;
 }
 
+// when I originally wrote this function, it didn't return playerChoice, so it was updating the variable but not passing the latest update of it to the playRound() function, leading it to perpetually be one round behind
 function getPlayerChoice() {
   playerChoice = prompt("What would you like to pick, rock, paper, or scissors?").toLowerCase();
   checkValidityPlayerChoice();
@@ -14,6 +15,7 @@ function getPlayerChoice() {
 }
 
 function checkValidityPlayerChoice() {
+  // we could make this a do while instead of being a looping function
   if (!choices.includes(playerChoice)) {
     playerChoice = prompt("Please select a valid option - either rock, paper, or scissors").toLowerCase();
     checkValidityPlayerChoice();
@@ -24,6 +26,8 @@ function findRoundWinner() {
   if (computerChoice == playerChoice) {
     winner = "draw";
   }
+
+  // this isn't the prettiest way of doing it, but it's easiest to read - we could also write: if compChoice = R && playChoice == S (same for compChoice P and S) then winner == "computer" else winner == "player" but the below is easier to read
   if (computerChoice == "rock") {
     if (playerChoice == "paper") {
       winner = "player";
