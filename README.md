@@ -428,6 +428,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [gradient.style](https://gradient.style/) for css gradients and shapes
 * [omatsuri](https://omatsuri.app/) for a bunch of stuff, from color shades to triangle generators, symbols, etc
 * [utopia](https://utopia.fyi/) for type scaling
+* [wowebook] for free webdev ebooks
 
 # paid courses to look into:
 * [https://css-for-js.dev/](https://css-for-js.dev/)
