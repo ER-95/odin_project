@@ -44,7 +44,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * `ul` vs `ol` (and `li`) (unordered lists, ordered lists, and points in lists)
         * `strong`
         * `em`
-        * `comments`
+        * comments
         * `img`
         * `a href` (both relative and absolute)
         * `span` (for only marking up part of a piece of text - see [this file](./4-css-test\index.html) for more info)
@@ -52,7 +52,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * what should go in the head (meta tags, title)
     * [when to use strong, b, em, and i](https://medium.com/@zac_heisey/when-to-use-strong-b-em-and-i-tags-in-your-markup-fa4d0af8affb)
 
-* split content into `<section>`s instead of using `<div>`s - similarly use `<header>` and `<footer>`
+* split content into `<section>`s instead of using `<div>`s - similarly use `<header>` and `<footer>` (e.g. actually put a header/footer in them rather than leaving them blank)
 
 * html reference sheets can be found [here (devdocs)](https://devdocs.io/html/) and [here (mozilla)](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
 
@@ -226,7 +226,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     let d = b++;
     ```
 
-* `+` will concatenate anything after a string if it encounters one, so:
+* `+` will concatenate anything in the same statement if it encounters a string, so:
     * `"" + 1 + 0` will output `10`
     * `4 + 5 + "px"` will output `45px`
     * `4 + 5 + "px" + 2 + 7` will output `45px27`
@@ -234,7 +234,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * putting `+` before a string variable will convert them to a number - so if `apples = "2"` and `oranges = "3" ` (note the quotation marks) and we `alert (apples + oranges)`, we'll get `23` because they're concatenated strings, but if we `alert (+apples + +oranges`), we'll get `5` because they've been converted to numbers
 
 * to include a variable in a concatenation, you have to use template literals -  `` ` `` instead of `"` or `'` - so `` `Hello, ${name}` ``, for example - these also respect line breaks without needing to manually enter a break character
-    * calculations can be done in template literals by doing `${variableA - variableB}`
+    * calculations can be done in template literals by doing `` `${variableA - variableB}` ``
 
 * all string methods return a new string rather than modifying the original string
 
@@ -246,9 +246,9 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * variables declared within a function are local to that function - variables defined outside of a function are available and editable globally
     * similarly, if a variable exists globally but we define it inside a function with `let` or similar, the global value remains ignored and unedited
 
-* we can edit an argument that's been passed to a function, for example to emphasise text (e.g. `function showMessage(from, text){from = '*' + from+ '*';}`)
+* we can edit an argument that's been passed to a function, for example to emphasise text (e.g. `function showMessage(from, text){from = '*' + from + '*' + text;}` will italicise the original `from` value)
 
-* you can define a default value (i.e. the value used if no argument is given) by putting `=` and then the default string or value after the parameter - we can also set a default value to be another function, so that if no parameter is given for X, we call a different function instead
+* you can define a default value in a function (i.e. the value used if no argument is given) by putting `=` and then the default string or value after the parameter - we can also set a default value to be another function, so that if no parameter is given for X, we call a different function instead
 
 * calling `return` without a value causes a function to exit immediately
 
