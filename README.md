@@ -180,7 +180,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
         * `flex-grow` defines how quickly an item increases in size to take up the extra space beyond its defined `width` or `flex-basis`
         * `flex-shrink` defines how quickly an item shrinks in size when the container is too small
-        * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply - so it's not the `width`, so much as "this is the minimum width we'd like it to be in an ideal world, but you can shrink if necessary, provided `flex-shrink` is set to `1`
+        * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply - so it's not the `width`, so much as "this is the minimum width we'd like it to be in an ideal world, but you can shrink if necessary", provided `flex-shrink` is set to `1` or more
         * setting `flex-basis` to `auto` means that they use their defined `height` when `flex-direction` is `column` (similarly, defined `width` is used when `flex-direction` is `row`) - if we simply use `flex: 1` then `flex-basis` is set to `0px`, meaning that the height of any columns created will be `0`
         * `height` overrides `flex: 1` when `flex-direction` is `row`, and `width` overrides `flex: 1` when `flex-direction` is `column` - no matter what, the item won't go above these values
     * `justify-self` is ignored in flexbox - if we want to move something to the end of the container, we set `margin-top` or `margin-left` to `auto` depending on where we want it to go
@@ -397,6 +397,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [javascript.info](https://javascript.info/)
 * [javascript string methods](https://www.w3schools.com/js/js_string_methods.asp) and [reference](https://www.w3schools.com/jsref/jsref_obj_string.asp), also at [mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 * [arrow functions cheat sheet](https://www.samanthaming.com/tidbits/47-arrow-functions-cheatsheet/)
+* [flexbox visual guide](https://marina-ferreira.github.io/tutorials/css/flexbox/)
 
 # supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
@@ -431,7 +432,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [gradient.style](https://gradient.style/) for css gradients and shapes
 * [omatsuri](https://omatsuri.app/) for a bunch of stuff, from color shades to triangle generators, symbols, etc
 * [utopia](https://utopia.fyi/) for type scaling
-* [wowebook] for free webdev ebooks
+* [wowebook](https://www.wowebook.com/) for free webdev ebooks
 
 # paid courses to look into:
 * [https://css-for-js.dev/](https://css-for-js.dev/)
