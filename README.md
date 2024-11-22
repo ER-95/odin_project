@@ -177,7 +177,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * `order` is `0` by default, if we change an item's order to `1`, ceteris paribus it would move to the end of the container
     * `flex: initial` overrides something inherited like `flex: 1`, so rather than scaling, it lets you set fixed widths
     * applying `margin-left: auto` to something in a container will move it to the right hand side of the container; it will also shift any items after that item in the container
-        * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
+    * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
         * `flex-grow` defines how quickly an item increases in size to take up the extra space beyond its defined `width` or `flex-basis`
         * `flex-shrink` defines how quickly an item shrinks in size when the container is too small
         * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply - so it's not the `width`, so much as "this is the minimum width we'd like it to be in an ideal world, but you can shrink if necessary, provided `flex-shrink` is set to `1`
