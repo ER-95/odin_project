@@ -147,7 +147,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
         * `div` is usually used to divide the page into different blocks
         * `span` can be used to group text/inline elements and is only used when nothing else is appropriate (e.g. highlighting text in a `p`)
     * `margin-left: auto` will align an element to the right end of its container
-    * increasing the `margin` of one element effectively increases the size of its container - so take into account size changes when using margin. if one element has `margin: 12px` then applying `margin: auto` to something else in the same container, whil it will take the `margin` of the other element into account, might not look right visually because the margin isn't visible - use borders (see `box-container` class [here](./6-css-margin-and-padding\1-margin-and-padding\index.html) and [here](./6-css-margin-and-padding\1-margin-and-padding\style.css) for more info) or inspect element to help with debugging
+    * increasing the `margin` of one element effectively increases the size of its container - so take into account size changes when using margin. if one element has `margin: 12px` then applying `margin: auto` to something else in the same container, while it will take the `margin` of the other element into account, might not look right visually because the margin isn't visible - use borders (see `box-container` class [here](./6-css-margin-and-padding\1-margin-and-padding\index.html) and [here](./6-css-margin-and-padding\1-margin-and-padding\style.css) for more info) or inspect element to help with debugging
     * ran into an interesting issue when doing 2-margin-and-padding:
         * `text-align: center` worked as expected
         * i wanted to approach it with a different solution by wrapping the text in `span` tags and using `margin: auto`
@@ -160,8 +160,8 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * flex stuff:
     * `justify-content: center` to a container is usually functionally the same as adding `margin: 0 auto` to that container's children (but the latter is bad practice, generally)- remember, `justify-content` does exactly what it says, it **aligns the contents inside it, and not the element itself** - `align-self` aligns an actual element and takes precedence over `justify-content` and `align-content`
         * `justify-content: space-around` puts equal spacing on both sides of the items, including at the edges, whereas `space-between` puts space between them (so goes to the edge of the container)
-    * `display: flex` only applies to direct children of a container rather than grandchildren. similarly, `justify-content` only applies to direct children, not children of children - see [this exercise](./8-flexbox/3-flex-header-2/index.html) for a good example of this
-    * items inside `containers-2`, which in turn is inside `container-1`, doesn't count as an item in `container-1` (i.e. items aren't found recursively) - an item is only really a child of its direct container. in the below code, the only items in `menu` are `date` and `links`
+        
+    * items inside `containers-2`, which in turn is inside `container-1`, don't count as items in `container-1` (i.e. items aren't found recursively) - an item is only really a child of its direct container. in the below code, the only items in `menu` are `date` and `links` - not `signup` or `login`
         ~~~~
         <div class='menu'>
             <div class='date'>Aug 14, 2016</div>
@@ -171,17 +171,18 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
             </div>
         </div>
         ~~~~
-    * `align-items` is used for vertical alignment, but when you rotate a container's direction, the `justify-content` property also rotates, so `justify-content` and `align-content` switch functions - **the best way to see this is that `justify-content` applies along the main axis, and `align-items` applies along the cross axis**
+        * `display: flex` only applies to direct children of a container rather than grandchildren. similarly, `justify-content` only applies to direct children, not children of children - see [this exercise](./8-flexbox/3-flex-header-2/index.html) for a good example of this
+    * `align-items` is used for vertical alignment, but when you rotate a container's direction, the `justify-content` property also changes, so `justify-content` and `align-content` switch functions - **the best way to see this is that `justify-content` applies along the main axis, and `align-items` applies along the cross axis**
     * by default, `flex-direction: row-reverse` only applies on a per row basis - `order` applies throughout the whole container
     * `order` is `0` by default, if we change an item's order to `1`, ceteris paribus it would move to the end of the container
     * `flex: initial` overrides something inherited like `flex: 1`, so rather than scaling, it lets you set fixed widths
     * applying `margin-left: auto` to something in a container will move it to the right hand side of the container; it will also shift any items after that item in the container
-    * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
-    * `flex-grow` defines how quickly an item increases in size to take up the extra space beyond its defined `width` or `flex-basis`
-    * `flex-shrink` defines how quickly an item shrinks in size when the container is too small
-    * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply - so it's not the `width`, so much as "this is the minimum width we'd like it to be in an ideal world, but you can shrink if necessary, provided `flex-shrink` is set to `1`
-    * setting `flex-basis` to `auto` means that they use their defined `height` when `flex-direction` is `column` (similarly, defined `width` is used when `flex-direction` is `row`) - if we simply use `flex: 1` then `flex-basis` is set to `0px`, meaning that the height of any columns created will be `0`
-    * `height` overrides `flex: 1` when `flex-direction` is `row`, and `width` overrides `flex: 1` when `flex-direction` is `column` - no matter what, the item won't go above these values
+        * `flex: 1` is equivalent to `flex: 1 1 0` which is also equivalent to `flex-grow: 1; flex-shrink: 1; flex-basis: 0`
+        * `flex-grow` defines how quickly an item increases in size to take up the extra space beyond its defined `width` or `flex-basis`
+        * `flex-shrink` defines how quickly an item shrinks in size when the container is too small
+        * `flex-basis` defines the base size of an item - above this, the `flex-grow` multiplier will apply how quickly it scales up in relation to other elements, and below this, the `flex-shrink` value will apply - so it's not the `width`, so much as "this is the minimum width we'd like it to be in an ideal world, but you can shrink if necessary, provided `flex-shrink` is set to `1`
+        * setting `flex-basis` to `auto` means that they use their defined `height` when `flex-direction` is `column` (similarly, defined `width` is used when `flex-direction` is `row`) - if we simply use `flex: 1` then `flex-basis` is set to `0px`, meaning that the height of any columns created will be `0`
+        * `height` overrides `flex: 1` when `flex-direction` is `row`, and `width` overrides `flex: 1` when `flex-direction` is `column` - no matter what, the item won't go above these values
     * `justify-self` is ignored in flexbox - if we want to move something to the end of the container, we set `margin-top` or `margin-left` to `auto` depending on where we want it to go
     * by default, children bunch at the start of the primary axis, and stretch to fill the entire container along the cross axis
     * when `flex-wrap` is set to `wrap`, `align-items` applies to the items on each individual row, whereas `align-content` applies to every row in that box
