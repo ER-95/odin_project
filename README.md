@@ -388,35 +388,44 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * when editing js in devtools, we have to ctrl + s to save it
 
 # useful reference material
+## general
 * [devdocs - useful reference sheet for pretty much every language ever](https://devdocs.io/)
+
+## css
+### specificity
 * [css specificity on w3schools](https://www.w3schools.com/css/css_specificity.asp)
 * [the css cascade - a beautiful page with tests on specificity](https://2019.wattenberger.com/blog/css-cascade)
-* [flexbox cheat sheet](https://flexbox.malven.co/)
-* [interactive guide to flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
-* [css-tricks flexbox cheat sheet](./!readme-images/css-flexbox-poster.png)
-* [javascript.info](https://javascript.info/)
-* [javascript string methods](https://www.w3schools.com/js/js_string_methods.asp) and [reference](https://www.w3schools.com/jsref/jsref_obj_string.asp), also at [mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-* [arrow functions cheat sheet](https://www.samanthaming.com/tidbits/47-arrow-functions-cheatsheet/)
-* [flexbox visual guide](https://marina-ferreira.github.io/tutorials/css/flexbox/)
 
-# supplementary links
+### flexbox
+* [flexbox cheat sheet (malven)](https://flexbox.malven.co/)
+* [interactive guide to flexbox (josh w comeau)](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
+* [css-tricks flexbox cheat sheet (image)](./!readme-images/css-flexbox-poster.png)
+    * compact version of [this css-tricks guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [flexbox visual guide - marina ferreira](https://marina-ferreira.github.io/tutorials/css/flexbox/)
+
+## javascript
+* [javascript.info](https://javascript.info/)
+* [javascript string methods w3schools](https://www.w3schools.com/js/js_string_methods.asp) and [w3schools reference](https://www.w3schools.com/jsref/jsref_obj_string.asp), also at [mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+* [arrow functions cheat sheet (samantha ming)](https://www.samanthaming.com/tidbits/47-arrow-functions-cheatsheet/)
+
+## misc supplementary links
 * [the xy problem - how to ask questions](https://xyproblem.info/)
     * [how to ask smart questions](http://www.catb.org/esr/faqs/smart-questions.html)
-* [live update the page you're working on](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 * [conventional commits - how to structure your commit messages](https://www.conventionalcommits.org/en/v1.0.0/)
 * [introduction to flexbox - interneting is hard](https://internetingishard.netlify.app/html-and-css/flexbox/index.html)
 * [interneting is hard as a whole](https://internetingishard.netlify.app/index.html)
 * [interneting is hard - responsive design](https://internetingishard.netlify.app/html-and-css/responsive-design/index.html)
-* [css tricks - complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [freecodecamp's intro to flexbox](https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/)
-* [youtube - flexbox crash course](https://www.youtube.com/watch?v=3YW65K6LcIA)
 * one day, I want my portfolio to look like [this](https://stefantopalovicdev.vercel.app/) (video on it [here](https://www.youtube.com/watch?v=VjiWpGR82t0))
     * or [this](https://www.benjaminbaker.dev/) (video on it [here](https://www.youtube.com/watch?v=gcpYTxa0GGw))
-* [javascript for impatient programmers](https://exploringjs.com/impatient-js/toc.html)
-* [conquering responsive layouts course](https://courses.kevinpowell.co/conquering-responsive-layouts)
-* [net ninja regex tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD)
+* [javascript for impatient programmers](https://exploringjs.com/js/book/index.html)
 * [when not to use regex](https://softwareengineering.stackexchange.com/questions/113237/when-you-should-not-use-regular-expressions)
 * [differences between regular and arrow functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
+
+### video guides
+* [youtube - flexbox crash course](https://www.youtube.com/watch?v=3YW65K6LcIA)
+* [conquering responsive layouts course](https://courses.kevinpowell.co/conquering-responsive-layouts)
+* [net ninja regex tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD)
 
 # useful tools
 * [prettier - automatic code formatting](https://prettier.io/)
@@ -433,6 +442,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [omatsuri](https://omatsuri.app/) for a bunch of stuff, from color shades to triangle generators, symbols, etc
 * [utopia](https://utopia.fyi/) for type scaling
 * [wowebook](https://www.wowebook.com/) for free webdev ebooks
+* [live update the page you're working on (installed)](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 # paid courses to look into:
 * [https://css-for-js.dev/](https://css-for-js.dev/)
