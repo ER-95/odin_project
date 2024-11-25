@@ -73,7 +73,7 @@ There are almost definitely going to be sections in here that aren't explicitly 
         * `,` to select more than one set of selectors (i.e. addition - so `p, div` selects all `p`s and all `div`s)
         * `*` to select everything, which can also be used to select everything inside something else (e.g. `p *` selects everything inside a `p`)
         * `+` to select any siblings - elements that directly follow another that are on the same level (NOT children)
-        * `~` to select all siblings - `A ~ B` selects all `B`s that appear after `A`
+        * `~` to select all siblings - `A ~ B` selects all `B`s that appear after `A`, but not `A` itself
         * `>` selects all direct children of an element
         * `X:first-child` selects `X` when it's the first child of another element - NOT the first child of `X`
         * `X:only-child` - selects `X` if it's the only child of another element
@@ -184,6 +184,36 @@ There are almost definitely going to be sections in here that aren't explicitly 
 * ul has a default padding of 40px, so you might want to override this
     
 * flex stuff:
+    * `justify-content` accepts:
+        * `flex-start`
+        * `flex-end`
+        * `center`
+        * `space-between`
+        * `space-around`
+
+    * `align-content` accepts the same as the above as well as `stretch`
+
+    * `align-items` and `align-self` accept:
+        * `flex-start`
+        * `flex-end`
+        * `center`
+        * `baseline`
+        * `stretch`
+
+    * `align-content` determines spacing between lines and only comes into effect when there are multiple lines, while `align-items` aligns the items themselves
+
+    * `flex-direction` accepts:
+        * `row` / `row-reverse`
+        * `column` / `column-reverse`
+        * both of the above `reverse`s will require you to use `flex-end` if you want the items to appear at the start rather than the end, as the new starting point is set to the original end when using `reverse`
+
+    * `flex-wrap` accepts:
+        * `nowrap`
+        * `wrap`
+        * `wrap-reverse`
+
+    * `flex-flow` combines `flex-direction` and `flex-wrap` and accepts the same arguments as them, e.g. `flex-flow: row wrap`
+
     * `justify-content: center` to a container is usually functionally the same as adding `margin: 0 auto` to that container's children (but the latter is bad practice, generally)- remember, `justify-content` does exactly what it says, it **aligns the contents inside it, and not the element itself** - `align-self` aligns an actual element and takes precedence over `justify-content` and `align-content`
         * `justify-content: space-around` puts equal spacing on both sides of the items, including at the edges, whereas `space-between` puts space between them (so goes to the edge of the container)
         
