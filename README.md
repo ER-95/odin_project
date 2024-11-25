@@ -410,6 +410,12 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [javascript string methods w3schools](https://www.w3schools.com/js/js_string_methods.asp) and [w3schools reference](https://www.w3schools.com/jsref/jsref_obj_string.asp), also at [mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 * [arrow functions cheat sheet (samantha ming)](https://www.samanthaming.com/tidbits/47-arrow-functions-cheatsheet/)
 
+## gamification
+* [flexbox froggy](https://flexboxfroggy.com/)
+* [anchoreum](https://anchoreum.com/)
+* [grid garden](https://cssgridgarden.com/)
+* [css diner](https://flukeout.github.io/)
+
 ## misc supplementary links
 ### general
 * [the xy problem - how to ask questions](https://xyproblem.info/)
