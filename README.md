@@ -5,6 +5,8 @@ This is where I'll be going through The Odin Project. The readme itself includes
 
 Apologies for the insistence on all lowercase in the readme - it makes it a lot easier for me to jot down my nonsense
 
+There are almost definitely going to be sections in here that aren't explicitly covered by The Odin Project, just by nature of coming across other resources while working on it
+
 # vs code stuff
 * `ctrl + shift + p` for shortcut
 
@@ -66,8 +68,32 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * chaining classes/ids in html (i.e. `class="class-one class-two"`) - for when an element should have multiple classes or ids applied to it.
     * you can do `.class-one.class-two{[stylistic features]}` in css and it'll only apply those styles to elements with both of those classes
     * ~~personally i feel like these should have different names as the html is the same whether you're applying multiple classes to the same element or applying styling to something with both classes in css - my opinion on this will likely change down the line as i see various use cases for it, but at the time of writing it's far more confusing than grouping and descendants~~ - not sure what i meant by this but i think it was with regard to chaining having the same name in html and css despite being something different
-    * descendant combinators in css (`.parent .child` only selects `.child` if it's a child of (i.e. nested in) a `.parent` in the html - this can also be done on elements/types, so instead of `.parent .child {[stylistic features]}` you could do `div p {[stylistic features]}` to apply styling to any `p`s that are children of `div`s
-    * the cascade (i.e. specificity)
+    * descendant combinators in css (`.parent.child` only selects `.child` if it's a child of (i.e. nested in) a `.parent` in the html - this can also be done on elements/types, so instead of `.parent.child {[stylistic features]}` you could do `div p {[stylistic features]}` to apply styling to any `p`s that are children of `div`s
+    * other selectors include:
+        * `,` to select more than one set of selectors (i.e. addition - so `p, div` selects all `p`s and all `div`s)
+        * `*` to select everything, which can also be used to select everything inside something else (e.g. `p *` selects everything inside a `p`)
+        * `+` to select any siblings - elements that directly follow another that are on the same level (NOT children)
+        * `~` to select all siblings - `A ~ B` selects all `B`s that appear after `A`
+        * `>` selects all direct children of an element
+        * `X:first-child` selects `X` when it's the first child of another element - NOT the first child of `X`
+        * `X:only-child` - selects `X` if it's the only child of another element
+        * `X:last-child` - selects `X` when it's the last chid of another element
+        * `X:nth-child(N)` - selects `X` when it's the Nth child of another element - this includes its siblings, so it selects the item if it's only the Nth child in the list, and not the Nth `X`
+        * `X:nth-last-child(N)` - selects `X` when it's the Nth child from the end - again, this includes siblings, so `X:nth-last-child(3)` won't select the 3rd last `X`, but will only select `X` if it's 3rd from the end out of all of its siblings
+            * if you specifically wanted the 3rd last X, you could ask for `X:nth-last-of-type(3)`
+        * `X:first-of-type` - selects `X` when it's the first `X` in a list
+        * `X:nth-of-type(N)` - selects `X` when it's the Nth `X` in a list, where N can be a number, or `even`, or `odd`
+            * this also accepts `Nn+Y`, such as `2n+3` which would select every 2nd `X`, starting from the 3rd one, so 3, 5, 7 etc
+        * `X:only-of-type` - selects `X` when it's the only child of its type within the parent
+        * `X:last-of-type` - selects `X` when its the last of its type within its parent
+        * `X:empty` - selects any `X` without children
+        * `X:not(Y)` - selects any `X` that doesn't have attribute `Y`
+        * `X[attribute="Y"]` - selects anything with said attribute, so:
+            * `[href]` selects anything with an `href`, 
+            * `a[href]` selects any `a`s that have an `href` attached (i.e. `a href="URL"`)
+            * `a href="google.com"` selects any `a`s that have an `href` of `google.com`
+            * `X[attribute^="xyz"]` selects anything where the attribute **begins** with `xyz` - you can use `$` instead of `^` for when you want it to end with `xyz`, and `*` when you want `xyz` to appear anywhere in the attribute
+        * the cascade (i.e. specificity)
         * css specificity is **weird** at first:
         * check out [this page (w3schools)](https://www.w3schools.com/css/css_specificity.asp) for a comprehensive breakdown
         * in essence:
