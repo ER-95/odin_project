@@ -29,7 +29,9 @@ There are almost definitely going to be sections in here that aren't explicitly 
 ]
 ```
 
-* disable `HTML: Auto Create Quotes` in preferences
+* disable `HTML: Auto Create Quotes`
+
+* disable `explorer.autoReveal`
 
 * vs code doesn't like `#` in filenames/folder names - `!` and `.` are okay
 
