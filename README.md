@@ -188,7 +188,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
     * when `flex-wrap` is set to `wrap`, `align-items` applies to the items on each individual row, whereas `align-content` applies to every row in that box
     * remember to set `display: flex`!!! this needs to be done in multiple places depending on what you want to flex - usually you'll want to apply this to anything whose children should flex. similarly, you don't want to overuse flex - while you can achieve what you want, [this exercise](./8-flexbox/4-flex-information/index.html) is a good example of how you can achieve the same without using flexbox
 
-* `min-width` is set to the the length of the longest unbreakable string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
+* `min-width` is set to the the length of the longest unbroken string of characters for elements containing text, but can be set manually - content will overflow from the container if `min-width` is bigger than the size of the container
 
 * we can use `@media all and (max-width: VALUE) { .container{} }` to apply conditional formatting based on display width (see [this css-tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for more info)
 
@@ -197,7 +197,9 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * `vw` can be used on a height, similarly `vh` can be used on a width - this lets you make items scale (like the boxes [here](./9-landing-page/index.html))
 
 * generally speaking, `px` is best to use for padding, `svw`/`svh` for responsiveness, and sometimes `%` for height - but play it by ear
-    * `dvh` causes content to resize as the user scrolls which isn't ideal
+    * `dvh` and `vh` cause content to resize as the user scrolls which isn't ideal
+    * `px` is mostly used for borders, margin, box shadows etc
+    * `em` for font sizes
 
 * `rem` is best to use for font sizes, potentially with `clamp` (e.g. `3rem, 5svw+1rem, 6rem` - min, preferred, max)
     * you can also use a `clamp` or even `min` on `gap`s between elements
@@ -409,6 +411,7 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [arrow functions cheat sheet (samantha ming)](https://www.samanthaming.com/tidbits/47-arrow-functions-cheatsheet/)
 
 ## misc supplementary links
+### general
 * [the xy problem - how to ask questions](https://xyproblem.info/)
     * [how to ask smart questions](http://www.catb.org/esr/faqs/smart-questions.html)
 * [conventional commits - how to structure your commit messages](https://www.conventionalcommits.org/en/v1.0.0/)
@@ -426,6 +429,11 @@ Apologies for the insistence on all lowercase in the readme - it makes it a lot 
 * [youtube - flexbox crash course](https://www.youtube.com/watch?v=3YW65K6LcIA)
 * [conquering responsive layouts course](https://courses.kevinpowell.co/conquering-responsive-layouts)
 * [net ninja regex tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD)
+
+### ai-based
+i firmly believe that ai is a scourge but have to concede that it has its uses for debugging and getting it to eli5 things, so...
+* [ai chatbot repo 1](https://fmhy.net/ai)
+* [ai chatbot repo 2 - linked to by the above, but the above could die at any moment](https://github.com/LiLittleCat/awesome-free-chatgpt/blob/main/README_en.md)
 
 # useful tools
 * [prettier - automatic code formatting](https://prettier.io/)
