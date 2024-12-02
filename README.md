@@ -29,7 +29,7 @@ There are almost definitely going to be sections in here that aren't explicitly 
 ]
 ```
 
-* disable `HTML: Auto Create Quotes`
+* disable `HTML: Auto Create Quotes` and `HTML: Auto close tags`
 
 * disable `explorer.autoReveal`
 
