@@ -3,9 +3,11 @@ Hello Odin!
 
 This is where I'll be going through The Odin Project. The readme itself includes random tidbits I've picked up along the way that are relevant to me as I'm learning, but probably won't be relevant to future me. This mostly consists of things that catch me off guard or are otherwise unexpected.
 
-Apologies for the insistence on all lowercase in the readme - it makes it a lot easier for me to jot down my nonsense
+Apologies for the insistence on all lowercase in the readme - it makes it a lot easier for me to jot down my nonsense.
 
-There are almost definitely going to be sections in here that aren't explicitly covered by The Odin Project, just by nature of coming across other resources while working on it
+There are almost definitely going to be sections in here that aren't explicitly covered by The Odin Project, just by nature of coming across other resources while working on it.
+
+Each folder has a subfolder called `unedited` to indicate that these are the raw files provided by The Odin Project where needed. The files in the parent folder include the contents of this raw file as well as any edits I've made to them to complete the exercise.
 
 # vs code stuff
 * `ctrl + shift + p` for shortcut
