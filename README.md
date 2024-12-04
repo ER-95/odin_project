@@ -266,6 +266,18 @@ Each folder has a subfolder called `unedited` to indicate that these are the raw
 
 * media queries can be used to stack side by side elements into a column on mobile
 
+* when adding padding to `a`s inside an `li`, you want to apply padding to the `li` instead of the `a`, because they're the outermost wrapper - applying it to the `a` won't actually do anything because they don't have any siblings to pad against
+
+* think outside the box, and think explicitly about what you're telling parents to do - in the [flex-modal exercise](08-flexbox/05-flex-modal-2024-redo/index.html), we don't want to justify or align the close button itself, but we want to set its parent container to justify its content to `space-between` - because if there are only two items in a container, that sets one to the far left, and one to the far right
+
+* you can use custom properties to set variables, for example:
+    ```
+    :root {
+    --modal-and-icon-spacing: 12px;
+    }
+    ```
+    this can then be called on with `var(--modal-and-icon-spacing);` elsewhere
+
 # js stuff
 * `let`, `const`, and `var` are used for variables
     * `let` and `var` are very similar, but `var` has no block scope - only current function or global (if defined outside a function), and are processed at function start (or script start for globals)

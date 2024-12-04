@@ -1,0 +1,12 @@
+body {
+  padding: 0 10%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-right a {
+  margin: 10px;
+}
