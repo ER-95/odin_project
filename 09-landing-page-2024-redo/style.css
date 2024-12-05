@@ -52,11 +52,12 @@ body {
   font-size: 48px;
   font-weight: bold;
   color: var(--lightest-white);
-  margin-bottom: -5px; /* is there a better way of doing this? if we remove it the gap below looks incorrect */
+  line-height: 1;
+  /* margin-bottom: -5px; is there a better way of doing this? if we remove it the gap below looks incorrect */
 }
 
 .teb-body {
-  margin: 10px 0px;
+  margin: 0px 0px;
   color: var(--light-white);
 }
 
