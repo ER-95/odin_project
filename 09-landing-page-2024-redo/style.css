@@ -1,5 +1,5 @@
 :root {
-  --side-padding: 15%;
+  --side-padding: 25%;
   --blue-bg: #1F2937;
   --lightest-white: #F9FAF8;
   --light-white: #E5E7EB;
@@ -80,20 +80,19 @@ body {
 .fib-child-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  
+  justify-content: space-around;  
 }
 
 .fib-image {
   justify-self: center;
-  width: 15vw;
-  height: 15vw;
+  width: 10vw;
+  height: 10vw;
   border: 5px solid var(--cta-color);
   border-radius: 10px;
   margin: 10px 0px;
 }
 
 .fib-text {
-  width: 15vw;
+  width: 10vw;
   color: grey;
 }
