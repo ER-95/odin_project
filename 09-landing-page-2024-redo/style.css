@@ -70,7 +70,7 @@ body {
 
 .teb-right {
   background-color: grey;
-  margin-left: auto;
+  margin-left: auto; /* is there a better way of doing this? */
   padding: 75px 50px;
 }
 
